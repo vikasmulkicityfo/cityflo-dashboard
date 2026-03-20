@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cityflo Shift Report Dashboard</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background: #f0f2f5; }
+  header { background: #1565c0; color: #fff; padding: 16px 28px; font-size: 22px; font-weight: bold; }
+  header span { color: #90caf9; }
+  .bar { background: #fff; padding: 18px 28px; display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-end; border-bottom: 2px solid #ddd; }
+  .fg { display: flex; flex-direction: column; gap: 5px; }
+  .fg label { font-size: 11px; font-weight: bold; text-transform: uppercase; color: #666; letter-spacing: .5px; }
+  .fg select { padding: 9px 12px; font-size: 14px; border: 1px solid #ccc; border-radius: 6px; min-width: 175px; background: #fff; color: #222; cursor: pointer; }
+  .fg select:focus { border-color: #1565c0; outline: none; }
+  .btn-run { padding: 10px 32px; background: #1565c0; color: #fff; border: none; border-radius: 6px; font-size: 15px; font-weight: bold; cursor: pointer; margin-top: 22px; }
+  .btn-run:hover { background: #0d47a1; }
+  .btn-clear { padding: 10px 20px; background: #fff; color: #555; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; cursor: pointer; margin-top: 22px; }
+  .btn-clear:hover { background: #f0f0f0; }
+  #main { padding: 28px; max-width: 1200px; margin: auto; }
+  .date-block { margin-bottom: 34px; }
+  .date-title { font-size: 13px; font-weight: bold; color: #1565c0; border-bottom: 2px solid #1565c0; display: inline-block; padding-bottom: 5px; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; }
+  .chips { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+  .chip { background: #fff; border: 1px solid #ddd; border-radius: 20px; padding: 5px 14px; font-size: 12px; font-weight: bold; display: flex; align-items: center; gap: 6px; }
+  .chip b { font-size: 15px; }
+  .chip b.q { color: #e53935; }
+  .chip b.o { color: #1976d2; }
+  .chip b.d { color: #388e3c; }
+  .shift-hdr { font-size: 12px; font-weight: bold; color: #555; text-transform: uppercase; letter-spacing: 1px; margin: 14px 0 10px; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: #ffa726; flex-shrink: 0; }
+  .dot.ev { background: #7c4dff; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 10px; }
+  .card { background: #fff; border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,.1); overflow: hidden; }
+  .card-top { padding: 12px 14px; color: #fff; font-size: 12px; font-weight: bold; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center; }
+  .card-top.q { background: #e53935; }
+  .card-top.o { background: #1976d2; }
+  .card-top.d { background: #388e3c; }
+  .cnt { background: rgba(255,255,255,.25); border-radius: 10px; padding: 2px 9px; font-size: 12px; }
+  .card-body { padding: 12px 14px; }
+  .item { font-size: 13px; line-height: 1.65; padding: 8px 0; border-bottom: 1px solid #f2f2f2; color: #333; }
+  .item:last-child { border-bottom: none; }
+  .na { color: #bbb; font-style: italic; font-size: 13px; padding: 6px 0; }
+  .empty { text-align: center; padding: 60px; color: #aaa; font-size: 16px; }
+  .updated { font-size: 12px; color: #aaa; margin-left: auto; align-self: center; }
+</style>
+</head>
+<body>
+
+<header>City<span>flo</span> &nbsp; Daily Shift Report Dashboard</header>
+
+<div class="bar">
+  <div class="fg">
+    <label>Date</label>
+    <select id="sel-date">
+      <option value="all">All Dates</option>
+      <option value="2025-03-22">22 March 2025</option>
+      <option value="2025-03-21">21 March 2025</option>
+      <option value="2025-03-20">20 March 2025</option>
+      <option value="2025-03-19">19 March 2025</option>
+      <option value="2025-03-18">18 March 2025</option>
+      <option value="2025-03-17">17 March 2025</option>
+    </select>
+  </div>
+  <div class="fg">
+    <label>Shift</label>
+    <select id="sel-shift">
+      <option value="all">All Shifts</option>
+      <option value="morning">Morning</option>
+      <option value="evening">Evening</option>
+    </select>
+  </div>
+  <div class="fg">
+    <label>Issue Type</label>
+    <select id="sel-type">
+      <option value="all">All Issues</option>
+      <option value="quality">Quality Issues</option>
+      <option value="operational">Operational Issues</option>
+      <option value="driver">Driver Issues</option>
+    </select>
+  </div>
+  <button class="btn-run" onclick="runReport()">&#9654; Run</button>
+  <button class="btn-clear" onclick="clearAll()">Clear</button>
+</div>
+
+<div id="main"></div>
+
+<script>
+var DATA = {
+  "2025-03-19": {
+    "date": "2025-03-19",
+    "morning": {
+      "quality": [
+        "C223: Breakdown. Driver 9864905978 requested a callback.",
+        "C05: Seat 2C sliding is jammed."
+      ],
+      "operational": [
+        "C99 Powai - Thane 04:20 PM ALL cancelled due to driver not available.",
+        "C607 Saki Naka - Mira Bhayandar 06:30 PM ALL cancelled due to driver unwell.",
+        "C274 Thane - Goregaon East (NTH) 11:00 AM ALL cancelled due to driver unwell.",
+        "C315 Vashi - South Mumbai 08:40 AM ALL cancelled due to driver not available."
+      ],
+      "driver": [
+        "C128 departed 12 minutes early from stop -> Everard Nagar"
+      ]
+    },
+    "evening": {
+      "quality": [
+        "C446: Bus Cancellation. Driver not available.",
+        "C627: Bus stopped due to fight between City flow driver and best driver.",
+        "C331: Bus Cancellations due to Operator Rentals.",
+        "C492: Bus breakdown due to pata broken, will shift few cx in C81.",
+        "C579: Bus Cancellation due to Window / Glass Panes. Bus swapped with C209.",
+        "C81: Ac water leakage from seat no. 4a and 5a.",
+        "C552: Bus breakdown due to pata broken."
+      ],
+      "operational": [
+        "C579 Lower Parel - Thane 06:35 PM VV cancelled due to Window / Glass Panes.",
+        "C210 Santacruz - Thane 05:00 PM ALL cancelled due to Suspension.",
+        "C99 Thane - Powai 10:15 AM ALL cancelled due to Clutch Plate."
+      ],
+      "driver": [
+        "C445 departed 10 minutes early from stop -> Dadar TT",
+        "C506 departed 9 minutes early from stop -> Everard Nagar",
+        "C176 departed 8 minutes early from stop -> Sion Hospital",
+        "C551 departed 7 minutes early from stop -> Everard Nagar",
+        "C89 departed 5 minutes early from stop -> BDB gate 3",
+        "C580 departed 5 minutes early from stop -> Family court",
+        "C128 departed 5 minutes early from stop -> Dadar TT Circle"
+      ]
+    }
+  },
+  "2025-03-18": {
+    "date": "2025-03-18",
+    "morning": {
+      "quality": [
+        "C56: Bus Breakdown. Driver Negligence."
+      ],
+      "operational": [
+        "C79 cancelled due to Servicing / Garage.",
+        "C56 cancelled due to Driver not available.",
+        "C446 cancelled due to Driver not available.",
+        "C141 cancelled due to Suspension."
+      ],
+      "driver": [
+        "C70 departed 21 minutes early from stop -> Godrej One"
+      ]
+    },
+    "evening": {
+      "quality": [
+        "C247: Bus was breakdown at hiranandani stop. Passengers deborded on same location.",
+        "C213: Increased the cooling kerosene smell is there.",
+        "C172: Bus Delay.",
+        "C287: Met with an accident damaged the car.",
+        "C449: Suspension of Bus is very bad. Too much bouncing & shaking continuously.",
+        "C62: Big hole under seat 7D.",
+        "C163: Seat condition of 2B is pathetic.",
+        "C123: AC is not working.. only fan blower is turned on.",
+        "C174: Plz on the fans.",
+        "C241: Ac in the bus is not working.",
+        "C345: AC is not effective.",
+        "C213: increased the cooling kerosene smell is there"
+      ],
+      "operational": [
+        "C56 cancelled Reason: Driver not available.",
+        "C203 cancelled due to AC.",
+        "C190 cancelled due to Window / Glass Panes.",
+        "DM01 cancelled due to Other.",
+        "C303 cancelled due to Other.",
+        "C313 cancelled due to Driver not available.",
+        "C160 cancelled due to Fitness Testing.",
+        "C287 cancelled due to Window / Glass Panes.",
+        "C276 cancelled due to Operator Rentals.",
+        "C446 cancelled due to Other.",
+        "C203 has been replaced with C172 for Seepz - Andheri Station 05:50 PM ALL - Rohit Chouhan"
+      ],
+      "driver": [
+        "C70 running on Santacruz - Thane 06:30 PM HN MN departed 5 minutes early from stop -> Central Plaza",
+        "C612 running on Saki Naka - Mira Bhayandar 06:30 PM ALL departed 5 minutes early from stop -> Ahura Centre",
+        "C580 running on BKC - Mira Bhayandar 06:05 PM ALL departed 5 minutes early from stop -> Yes Bank",
+        "C580 running on BKC - Mira Bhayandar 06:05 PM ALL departed 5 minutes early from stop -> Family court",
+        "C580 running on BKC - Mira Bhayandar 06:05 PM ALL departed 5 minutes early from stop -> RBI",
+        "C70 Bus C70 running on Santacruz - Thane 06:30 PM HN MN departed 21 minutes early from stop -> Godrej One",
+        "C289 Bus C289 running on Andheri - Navi Mumbai 06:20 PM ALL departed 10 minutes early from stop -> Metro Company",
+        "C289 departed 10 minutes early from stop -> Metro Company",
+        "C580 departed 7 minutes early from stop -> Yes Bank",
+        "C70 departed 5 minutes early from stop -> Central Plaza",
+        "C612 departed 5 minutes early from stop -> Ahura Centre"
+      ]
+    }
+  },
+  "2025-03-17": {
+    "date": "2025-03-17",
+    "morning": {
+      "quality": [],
+      "operational": [
+        "C270 cancelled due to Temporary leave.",
+        "C36 cancelled due to Temporary leave.",
+        "C504 cancelled due to Engine Issues."
+      ],
+      "driver": []
+    },
+    "evening": {
+      "quality": [
+        "C227: Battery. Bus swapped with C61.",
+        "C02: Driver Negligence.",
+        "C79: Servicing / Garage. Bus swapped with C04.",
+        "C227: AC issue not working.",
+        "C227: Battery.",
+        "C129: AC.",
+        "C203: AC.",
+        "C165: AC.",
+        "C04: AC.",
+        "C31: Operator Rentals.",
+        "C653: AC.",
+        "C262: Battery.",
+        "C01: Door."
+      ],
+      "operational": [
+        "C79 cancelled due to Servicing / Garage.",
+        "C02 cancelled due to Driver Negligence.",
+        "C227 cancelled due to Battery.",
+        "C129 cancelled due to AC.",
+        "C203 cancelled due to AC.",
+        "C165 cancelled due to AC.",
+        "C04 cancelled due to AC.",
+        "C31 cancelled due to Operator Rentals.",
+        "C653 cancelled due to AC.",
+        "C262 cancelled due to Battery."
+      ],
+      "driver": [
+        "C314 departed 26 minutes early from stop -> Godrej One",
+        "C607 departed 15 minutes early from stop -> Virwani Estate",
+        "C580 departed 15 minutes early from stop -> Yes Bank",
+        "C612 departed 14 minutes early from stop -> JB Nagar Metro Station",
+        "C506 departed 10 minutes early from stop -> Everard Nagar",
+        "C445 departed 7 minutes early from stop -> Dadar TT",
+        "C41 departed 7 minutes early from stop -> Yes Bank",
+        "C627 departed 6 minutes early from stop -> Silver Metropolis",
+        "C196 departed 6 minutes early from stop -> Yes Bank",
+        "C289 departed 5 minutes early from stop -> Axis Bank",
+        "C609 departed 5 minutes early from stop -> Yes Bank",
+        "C42 departed 5 minutes early from stop -> ICICI Bus Stop",
+        "C80 departed 5 minutes early from stop -> Sion Hospital"
+      ]
+    }
+  },
+  "2025-03-20": {
+    "date": "2025-03-20",
+    "morning": {
+      "quality": [
+        "C51: Some carbon particles were falling from the AC duct at 4D, it soiled shirt; asides the foot rest bar is also broken.",
+        "C85: The ac doesn't seems to be working. It's just putting out air, not cold. Bus is so damaged and we pay so high amount for this.",
+        "C81: AC. Bus cancelled."
+      ],
+      "operational": [
+        "C219 cancelled due to Cityflo Rentals.",
+        "C81 cancelled due to AC.",
+        "C267 for Navi Mumbai - Andheri 08:00 AM ALL on 20-03-2025 was cancelled due to Clutch Plate."
+      ],
+      "driver": [
+        "C324 departed 9 minutes early from stop -> One Hiranandani Park"
+      ]
+    },
+    "evening": {
+      "quality": [
+        "C186: Ac not working. You should refund the fare.",
+        "C186: Ac is not working in this bus.",
+        "C186: AC issue."
+      ],
+      "operational": [
+        "C267 cancelled due to Suspension.",
+        "DM01 cancelled due to Other.",
+        "C127 cancelled due to Operator Rentals.",
+        "C186 cancelled due to AC.",
+        "C267 cancelled due to Servicing / Garage."
+      ],
+      "driver": [
+        "C128 departed 9 minutes early from stop -> Everard Nagar",
+        "C146 departed 8 minutes early from stop -> Godrej One",
+        "C289 departed 8 minutes early from stop -> Metro Company",
+        "C445 departed 7 minutes early from stop -> Dadar TT",
+        "C627 departed 6 minutes early from stop -> SEEPZ Gate 3",
+        "C506 departed 6 minutes early from stop -> Everard Nagar",
+        "C224 departed 5 minutes early from stop -> Nalanda foot over bridge, Ghatkopar",
+        "C324 departed 5 minutes early from stop -> IIT Powai Main Gate",
+        "C98 departed 5 minutes early from stop -> Dadar TT"
+      ]
+    }
+  },
+  "2025-03-21": {
+    "date": "2025-03-21",
+    "morning": {
+      "quality": [
+        "H62: Partial fleet / Demand Requirement. Bus Cancellation."
+      ],
+      "operational": [
+        "H01 cancelled due to Driver unwell.",
+        "H26 cancelled due to Partial fleet / Demand Requirement.",
+        "C81 cancelled due to Clutch Plate."
+      ],
+      "driver": [
+        "C653 departed 11 minutes early from stop -> Akurli Road",
+        "C90 departed 10 minutes early from stop -> Sai Dham"
+      ]
+    },
+    "evening": {
+      "quality": [
+        "C270: Door issue. Bus swapped with C183.",
+        "C171: Side window panel Broken down due to accident after Uran Phata. Passengers moved to C445 and C287."
+      ],
+      "operational": [
+        "C502 cancelled due to Clutch Plate.",
+        "C171 cancelled due to Window / Glass Panes.",
+        "C270 cancelled due to Door.",
+        "C491 cancelled due to Clutch Plate.",
+        "C276 cancelled due to Cityflo Rentals.",
+        "C527 cancelled due to Engine Issues."
+      ],
+      "driver": [
+        "C407 departed 12 minutes early from stop -> Tagore nagar junction",
+        "C90 departed 10 minutes early from stop -> Akurli Road",
+        "C344 departed 6 minutes early from stop -> IIT Powai Main Gate",
+        "C215 departed 5 minutes early from stop -> Fire Station",
+        "C506 departed 5 minutes early from stop -> Everard Nagar"
+      ]
+    }
+  },
+  "2025-03-22": {
+    "date": "2025-03-22",
+    "morning": {
+      "quality": [],
+      "operational": [],
+      "driver": [
+        "C183 departed 22 minutes early from stop -> RTO Kamraj Nagar"
+      ]
+    },
+    "evening": {
+      "quality": [],
+      "operational": [],
+      "driver": [
+        "C218 departed 5 minutes early from stop -> Bayroute Powai"
+      ]
+    }
+  }
+};
+
+var ALL_DATES = ["2025-03-22", "2025-03-21", "2025-03-20", "2025-03-19", "2025-03-18", "2025-03-17"];
+
+function runReport() {
+  var fd = document.getElementById("sel-date").value;
+  var fs = document.getElementById("sel-shift").value;
+  var ft = document.getElementById("sel-type").value;
+  var el = document.getElementById("main");
+
+  var dates = (fd == "all") ? ALL_DATES : [fd];
+  var shifts = (fs == "all") ? ["morning","evening"] : [fs];
+  var types  = (ft == "all") ? ["quality","operational","driver"] : [ft];
+
+  if (dates.length == 0) {
+    el.innerHTML = '<div class="empty">No reports found.</div>';
+    return;
+  }
+
+  var html = "";
+  for (var i = 0; i < dates.length; i++) {
+    var dt = dates[i];
+    var en = DATA[dt];
+    if (!en) continue;
+
+    var tq=0, to=0, td=0;
+    for (var s=0; s<shifts.length; s++) {
+      var sh = en[shifts[s]] || {};
+      tq += (sh.quality||[]).length;
+      to += (sh.operational||[]).length;
+      td += (sh.driver||[]).length;
+    }
+
+    html += '<div class="date-block">';
+    html += '<div class="date-title">' + fmtDate(dt) + '</div>';
+    html += '<div class="chips">';
+    html += '<div class="chip"><b class="q">'+tq+'</b>&nbsp;Quality</div>';
+    html += '<div class="chip"><b class="o">'+to+'</b>&nbsp;Operational</div>';
+    html += '<div class="chip"><b class="d">'+td+'</b>&nbsp;Driver</div>';
+    html += '</div>';
+
+    for (var s=0; s<shifts.length; s++) {
+      var shift = shifts[s];
+      var sd = en[shift] || {};
+      var dotcls = (shift=="evening") ? "dot ev" : "dot";
+      html += '<div class="shift-hdr"><span class="'+dotcls+'"></span>' + cap(shift) + ' Shift</div>';
+      html += '<div class="grid">';
+      for (var t=0; t<types.length; t++) {
+        var tp    = types[t];
+        var items = sd[tp] || [];
+        var lbl   = tp=="quality" ? "Quality Issues" : tp=="operational" ? "Operational Issues" : "Driver Issues";
+        var cls   = tp=="quality" ? "q" : tp=="operational" ? "o" : "d";
+        html += '<div class="card">';
+        html += '<div class="card-top '+cls+'">'+lbl+'<span class="cnt">'+items.length+'</span></div>';
+        html += '<div class="card-body">';
+        if (items.length==0) {
+          html += '<div class="na">NA</div>';
+        } else {
+          for (var k=0; k<items.length; k++) {
+            html += '<div class="item">'+esc(items[k])+'</div>';
+          }
+        }
+        html += '</div></div>';
+      }
+      html += '</div>';
+    }
+    html += '</div>';
+  }
+  el.innerHTML = html || '<div class="empty">No reports found.</div>';
+}
+
+function clearAll() {
+  document.getElementById("sel-date").value  = "all";
+  document.getElementById("sel-shift").value = "all";
+  document.getElementById("sel-type").value  = "all";
+  runReport();
+}
+
+function fmtDate(iso) {
+  var p = iso.split("-");
+  var m = ["","January","February","March","April","May","June","July","August","September","October","November","December"];
+  return parseInt(p[2]) + " " + m[parseInt(p[1])] + " " + p[0];
+}
+function cap(s) { return s.charAt(0).toUpperCase()+s.slice(1); }
+function esc(s) { return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+runReport();
+</script>
+</body>
+</html>
