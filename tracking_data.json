@@ -24,10 +24,9 @@
             "C453",
             "C471",
             "C502",
-            "C60",
-            "H110"
+            "C60"
           ],
-          "bus_count": 22,
+          "bus_count": 21,
           "details": [
             {
               "time": "08:03",
@@ -93,7 +92,6 @@
                 "C247",
                 "C419",
                 "C229",
-                "H110",
                 "C30",
                 "C38",
                 "C60",
@@ -129,12 +127,23 @@
           "details": []
         },
         "Hyderabad": {
-          "buses": [],
-          "bus_count": 0,
-          "details": []
+          "buses": [
+            "H110"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "09:46",
+              "buses": [
+                "H110"
+              ],
+              "message": "Hi Team,\n\nWe observed a major tracking issue across multiple buses, which significantly impacted call flow and BusChat operations.\n\nKey concerns:\n\nLast-minute swap: C38 swapped with C502\nTracking fluctuations: C247, C419, C229, H110, C30, C38, C60, C252, C241, C196, C103, C453, C44, C471, C401, C158\nDelays:\nC170 – 14 minutes delay at the first stop\nC179 - 17 minutes delay at the first stop\nC351 –",
+              "group": "Ops CS Updates - Mumbai"
+            }
+          ]
         }
       },
-      "fetched_at": "23-03-2026 12:29 IST"
+      "fetched_at": "23-03-2026 12:33 IST"
     }
   }
 }
