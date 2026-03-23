@@ -10,6 +10,7 @@
             "C170",
             "C179",
             "C196",
+            "C212",
             "C229",
             "C241",
             "C247",
@@ -26,7 +27,7 @@
             "C60",
             "H110"
           ],
-          "bus_count": 21,
+          "bus_count": 22,
           "details": [
             {
               "time": "08:03",
@@ -111,6 +112,14 @@
               ],
               "message": "Hi Team,\n\nWe observed a major tracking issue across multiple buses, which significantly impacted call flow and BusChat operations.\n\nKey concerns:\n\nLast-minute swap: C38 swapped with C502\nTracking fluctuations: C247, C419, C229, H110, C30, C38, C60, C252, C241, C196, C103, C453, C44, C471, C401, C158\nDelays:\nC170 – 14 minutes delay at the first stop\nC179 - 17 minutes delay at the first stop\nC351 –",
               "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "12:11",
+              "buses": [
+                "C212"
+              ],
+              "message": "C212 Tracker is not working @vishalmuneshwar10",
+              "group": "Daily Ops - Mumbai"
             }
           ]
         },
@@ -125,7 +134,7 @@
           "details": []
         }
       },
-      "fetched_at": "23-03-2026 11:52 IST"
+      "fetched_at": "23-03-2026 12:12 IST"
     }
   }
 }
