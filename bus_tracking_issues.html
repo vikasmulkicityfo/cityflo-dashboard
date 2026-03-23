@@ -20,6 +20,10 @@
   .filter-group label { font-size: 12px; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: .4px; white-space: nowrap; }
   .filter-group select { padding: 7px 11px; font-size: 13px; border: 1px solid #ccc; border-radius: 6px; background: #fff; color: #222; cursor: pointer; }
   .filter-group select:focus { border-color: #1565c0; outline: none; }
+  .btn-run { padding: 8px 22px; background: #1565c0; color: #fff; border: none; border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer; letter-spacing: .3px; }
+  .btn-run:hover { background: #0d47a1; }
+  .btn-clear { padding: 8px 16px; background: #fff; color: #666; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; cursor: pointer; }
+  .btn-clear:hover { background: #f5f5f5; }
 
   /* ── Legend ── */
   .legend { display: flex; align-items: center; gap: 14px; margin-left: auto; flex-wrap: wrap; }
@@ -105,13 +109,13 @@
 <div class="filters">
   <div class="filter-group">
     <label for="sel-date">Date</label>
-    <select id="sel-date" onchange="applyFilter()">
+    <select id="sel-date">
       <option value="all">All Dates</option>
     </select>
   </div>
   <div class="filter-group">
     <label for="sel-shift">Shift</label>
-    <select id="sel-shift" onchange="applyFilter()">
+    <select id="sel-shift">
       <option value="all">Both Shifts</option>
       <option value="morning">Morning</option>
       <option value="evening">Evening</option>
@@ -119,13 +123,15 @@
   </div>
   <div class="filter-group">
     <label for="sel-city">City</label>
-    <select id="sel-city" onchange="applyFilter()">
+    <select id="sel-city">
       <option value="all">All Cities</option>
       <option value="Mumbai">Mumbai</option>
       <option value="Delhi">Delhi</option>
       <option value="Hyderabad">Hyderabad</option>
     </select>
   </div>
+  <button class="btn-run" onclick="applyFilter()">&#9654;&nbsp; Run</button>
+  <button class="btn-clear" onclick="clearFilters()">&#10005;&nbsp; Clear</button>
 </div>
 
 <main id="main">
@@ -205,7 +211,7 @@ C351 –</td></tr>
   </div>
 </div>
     </div>
-    <div class="fetched-at">Last updated: 23-03-2026 12:12 IST</div>
+    <div class="fetched-at">Last updated: 23-03-2026 12:29 IST</div>
   </div>
 </div>
 
@@ -259,6 +265,16 @@ function applyFilter() {
     });
   });
 }
+
+function clearFilters() {
+  document.getElementById('sel-date').value  = 'all';
+  document.getElementById('sel-shift').value = 'all';
+  document.getElementById('sel-city').value  = 'all';
+  applyFilter();
+}
+
+// Show all on load
+applyFilter();
 </script>
 </body>
 </html>
