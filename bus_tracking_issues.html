@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cityflo — Bus Tracking Issues</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f4f8; color: #222; min-height: 100vh; }
+
+  /* ── Header ── */
+  header { background: #1565c0; color: #fff; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  header h1 { font-size: 20px; font-weight: 700; letter-spacing: .3px; }
+  header h1 span { color: #90caf9; }
+  .subtitle { font-size: 13px; color: #bbdefb; margin-top: 3px; }
+
+  /* ── Filters ── */
+  .filters { background: #fff; padding: 14px 32px; border-bottom: 1px solid #dde3ea; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .filter-group { display: flex; align-items: center; gap: 8px; }
+  .filter-group label { font-size: 12px; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: .4px; white-space: nowrap; }
+  .filter-group select { padding: 7px 11px; font-size: 13px; border: 1px solid #ccc; border-radius: 6px; background: #fff; color: #222; cursor: pointer; }
+  .filter-group select:focus { border-color: #1565c0; outline: none; }
+
+  /* ── Legend ── */
+  .legend { display: flex; align-items: center; gap: 14px; margin-left: auto; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #555; font-weight: 600; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+  /* ── Main ── */
+  main { max-width: 1200px; margin: 28px auto; padding: 0 24px; }
+
+  /* ── Day block ── */
+  .day-block { margin-bottom: 36px; }
+  .day-header {
+    font-size: 14px; font-weight: 800; color: #1565c0;
+    border-left: 4px solid #1565c0; padding: 4px 0 4px 12px;
+    margin-bottom: 16px; text-transform: uppercase; letter-spacing: .5px;
+  }
+
+  /* ── Shift wrapper ── */
+  .shift-wrapper { background: #fff; border-radius: 10px; box-shadow: 0 1px 6px rgba(0,0,0,.09); overflow: hidden; margin-bottom: 14px; }
+  .shift-title {
+    padding: 12px 18px; font-size: 13px; font-weight: 700;
+    color: #fff; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  }
+  .shift-morning .shift-title { background: #e65100; }
+  .shift-evening .shift-title { background: #4527a0; }
+  .shift-total { font-size: 12px; font-weight: 600; background: rgba(255,255,255,.25); border-radius: 12px; padding: 2px 10px; white-space: nowrap; }
+
+  /* ── City grid ── */
+  .city-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+  @media (max-width: 750px) { .city-grid { grid-template-columns: 1fr; } }
+
+  /* ── City block ── */
+  .city-block { border-right: 1px solid #eee; }
+  .city-block:last-child { border-right: none; }
+  .city-header {
+    padding: 9px 14px; font-size: 12px; font-weight: 800;
+    color: #fff; letter-spacing: .5px; text-transform: uppercase;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .city-count { background: rgba(255,255,255,.28); border-radius: 10px; padding: 1px 8px; font-size: 12px; }
+  .city-body { padding: 10px 14px 12px; }
+
+  /* ── Bus chips ── */
+  .bus-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .bus-chip { border-radius: 20px; border: 1px solid; padding: 3px 11px; font-size: 12px; font-weight: 700; }
+
+  .no-issues { font-size: 12px; color: #bbb; font-style: italic; padding: 4px 0; }
+
+  /* ── Details toggle ── */
+  .detail-toggle { margin-top: 4px; }
+  .detail-toggle summary { font-size: 12px; color: #1565c0; cursor: pointer; font-weight: 600; padding: 3px 0; list-style: none; }
+  .detail-toggle summary::before { content: '▶ '; font-size: 10px; }
+  details[open] .detail-toggle summary::before,
+  .detail-toggle[open] summary::before { content: '▼ '; font-size: 10px; }
+  .detail-toggle summary:hover { text-decoration: underline; }
+  .detail-table { width: 100%; margin-top: 8px; border-collapse: collapse; font-size: 11.5px; }
+  .detail-table th { background: #f5f5f5; padding: 6px 8px; text-align: left; font-weight: 700; color: #444; border-bottom: 2px solid #e0e0e0; white-space: nowrap; }
+  .detail-table td { padding: 6px 8px; border-bottom: 1px solid #f2f2f2; vertical-align: top; line-height: 1.5; word-break: break-word; }
+  .detail-table tr:last-child td { border-bottom: none; }
+  .detail-table td:first-child { white-space: nowrap; font-weight: 700; color: #666; }
+  .detail-table td:nth-child(4) { max-width: 260px; }
+
+  .fetched-at { padding: 6px 18px 10px; font-size: 11px; color: #bbb; border-top: 1px solid #f5f5f5; }
+
+  /* ── Empty ── */
+  .empty { text-align: center; padding: 80px 20px; color: #aaa; font-size: 15px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>City<span>flo</span> &mdash; Bus Tracking Issues</h1>
+    <div class="subtitle">Shift-wise &amp; city-wise tracking failure log</div>
+  </div>
+  <div class="legend">
+    <div class="legend-item"><span class="legend-dot" style="background:#1565c0"></span>Mumbai</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#b71c1c"></span>Delhi</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#1b5e20"></span>Hyderabad</div>
+  </div>
+</header>
+
+<div class="filters">
+  <div class="filter-group">
+    <label for="sel-date">Date</label>
+    <select id="sel-date" onchange="applyFilter()">
+      <option value="all">All Dates</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label for="sel-shift">Shift</label>
+    <select id="sel-shift" onchange="applyFilter()">
+      <option value="all">Both Shifts</option>
+      <option value="morning">Morning</option>
+      <option value="evening">Evening</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label for="sel-city">City</label>
+    <select id="sel-city" onchange="applyFilter()">
+      <option value="all">All Cities</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Hyderabad">Hyderabad</option>
+    </select>
+  </div>
+</div>
+
+<main id="main">
+<div class="day-block" data-date="2026-03-23">
+  <div class="day-header">23 Mar 2026</div>
+  <div class="shift-wrapper shift-morning" data-shift="morning">
+    <div class="shift-title">Morning Shift  ·  6 AM – 3 PM<span class="shift-total">21 buses affected</span></div>
+    <div class="city-grid">
+<div class="city-block">
+  <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">21</span></div>
+  <div class="city-body">
+    <div class="bus-chips">
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C07</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C103</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C158</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C170</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C179</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C196</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C229</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C241</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C247</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C252</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C30</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C351</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C38</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C401</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C419</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C44</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C453</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C471</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C502</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C60</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">H110</span>
+    </div>
+    <details class="detail-toggle">
+      <summary>View 9 message(s)</summary>
+      <table class="detail-table">
+        <thead><tr><th>Time</th><th>Buses</th><th>Group</th><th>Message</th></tr></thead>
+        <tbody>
+          <tr><td>08:03</td><td><b>C179</b></td><td>Daily Ops - Mumbai</td><td>C179 @Shriniwas1996 tracking not available, bus status??</td></tr>
+          <tr><td>08:17</td><td><b>—</b></td><td>Ops CS Updates - Mumbai</td><td>but tracking is not working</td></tr>
+          <tr><td>08:36</td><td><b>C07</b></td><td>Daily Ops - Mumbai</td><td>C07 Status Tracker is not working @Shriniwas1996</td></tr>
+          <tr><td>08:41</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>tracker is  not working</td></tr>
+          <tr><td>08:52</td><td><b>—</b></td><td>Ops CS Updates - Mumbai</td><td>Why tracking is not working</td></tr>
+          <tr><td>08:56</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>tracking down [Faiyaz](tg://user?id=844669251)</td></tr>
+          <tr><td>09:04</td><td><b>C229</b></td><td>Daily Ops - Mumbai</td><td>C229 tracker not working [Faiyaz](tg://user?id=844669251)</td></tr>
+          <tr><td>09:09</td><td><b>C247</b></td><td>Ops CS Updates - Mumbai</td><td>tracking not working bus is delayed [Shaikh](tg://user?id=741565755) c247</td></tr>
+          <tr><td>09:46</td><td><b>C38, C502, C247, C419, C229, H110, C30, C38, C60, C252, C241, C196, C103, C453, C44, C471, C401, C158, C170, C179, C351</b></td><td>Ops CS Updates - Mumbai</td><td>Hi Team,
+
+We observed a major tracking issue across multiple buses, which significantly impacted call flow and BusChat operations.
+
+Key concerns:
+
+Last-minute swap: C38 swapped with C502
+Tracking fluctuations: C247, C419, C229, H110, C30, C38, C60, C252, C241, C196, C103, C453, C44, C471, C401, C158
+Delays:
+C170 – 14 minutes delay at the first stop
+C179 - 17 minutes delay at the first stop
+C351 –</td></tr>
+        </tbody>
+      </table>
+    </details>
+  </div>
+</div>
+<div class="city-block">
+  <div class="city-header" style="background:#b71c1c">Delhi &nbsp;<span class="city-count">0</span></div>
+  <div class="city-body">
+    <div class="no-issues">No tracking issues</div>
+  </div>
+</div>
+<div class="city-block">
+  <div class="city-header" style="background:#1b5e20">Hyderabad &nbsp;<span class="city-count">0</span></div>
+  <div class="city-body">
+    <div class="no-issues">No tracking issues</div>
+  </div>
+</div>
+    </div>
+    <div class="fetched-at">Last updated: 23-03-2026 11:52 IST</div>
+  </div>
+</div>
+
+</main>
+
+<script>
+var DATES = ["2026-03-23"];
+
+// Populate date filter
+(function() {
+  var sel = document.getElementById('sel-date');
+  var months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  DATES.forEach(function(d) {
+    var p = d.split('-');
+    var opt = document.createElement('option');
+    opt.value = d;
+    opt.textContent = parseInt(p[2]) + ' ' + months[parseInt(p[1])] + ' ' + p[0];
+    sel.appendChild(opt);
+  });
+})();
+
+function applyFilter() {
+  var fd = document.getElementById('sel-date').value;
+  var fs = document.getElementById('sel-shift').value;
+  var fc = document.getElementById('sel-city').value;
+
+  document.querySelectorAll('.day-block').forEach(function(block) {
+    var dateMatch = (fd === 'all' || block.dataset.date === fd);
+    block.style.display = dateMatch ? '' : 'none';
+    if (!dateMatch) return;
+
+    // Show/hide shifts
+    block.querySelectorAll('.shift-wrapper').forEach(function(sw) {
+      var shiftMatch = (fs === 'all' || sw.dataset.shift === fs);
+      sw.style.display = shiftMatch ? '' : 'none';
+    });
+
+    // Show/hide city columns
+    block.querySelectorAll('.city-block').forEach(function(cb) {
+      if (fc === 'all') {
+        cb.style.display = '';
+      } else {
+        var hdr = cb.querySelector('.city-header');
+        cb.style.display = (hdr && hdr.textContent.trim().startsWith(fc)) ? '' : 'none';
+      }
+    });
+
+    // Adjust grid columns when city filtered
+    block.querySelectorAll('.city-grid').forEach(function(grid) {
+      grid.style.gridTemplateColumns = (fc === 'all') ? '1fr 1fr 1fr' : '1fr';
+    });
+  });
+}
+</script>
+</body>
+</html>

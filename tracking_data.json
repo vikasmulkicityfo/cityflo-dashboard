@@ -1,0 +1,131 @@
+{
+  "2026-03-23": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C07",
+            "C103",
+            "C158",
+            "C170",
+            "C179",
+            "C196",
+            "C229",
+            "C241",
+            "C247",
+            "C252",
+            "C30",
+            "C351",
+            "C38",
+            "C401",
+            "C419",
+            "C44",
+            "C453",
+            "C471",
+            "C502",
+            "C60",
+            "H110"
+          ],
+          "bus_count": 21,
+          "details": [
+            {
+              "time": "08:03",
+              "buses": [
+                "C179"
+              ],
+              "message": "C179 @Shriniwas1996 tracking not available, bus status??",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:17",
+              "buses": [],
+              "message": "but tracking is not working",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "08:36",
+              "buses": [
+                "C07"
+              ],
+              "message": "C07 Status Tracker is not working @Shriniwas1996",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:41",
+              "buses": [],
+              "message": "tracker is  not working",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:52",
+              "buses": [],
+              "message": "Why tracking is not working",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "08:56",
+              "buses": [],
+              "message": "tracking down [Faiyaz](tg://user?id=844669251)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "09:04",
+              "buses": [
+                "C229"
+              ],
+              "message": "C229 tracker not working [Faiyaz](tg://user?id=844669251)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "09:09",
+              "buses": [
+                "C247"
+              ],
+              "message": "tracking not working bus is delayed [Shaikh](tg://user?id=741565755) c247",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "09:46",
+              "buses": [
+                "C38",
+                "C502",
+                "C247",
+                "C419",
+                "C229",
+                "H110",
+                "C30",
+                "C38",
+                "C60",
+                "C252",
+                "C241",
+                "C196",
+                "C103",
+                "C453",
+                "C44",
+                "C471",
+                "C401",
+                "C158",
+                "C170",
+                "C179",
+                "C351"
+              ],
+              "message": "Hi Team,\n\nWe observed a major tracking issue across multiple buses, which significantly impacted call flow and BusChat operations.\n\nKey concerns:\n\nLast-minute swap: C38 swapped with C502\nTracking fluctuations: C247, C419, C229, H110, C30, C38, C60, C252, C241, C196, C103, C453, C44, C471, C401, C158\nDelays:\nC170 – 14 minutes delay at the first stop\nC179 - 17 minutes delay at the first stop\nC351 –",
+              "group": "Ops CS Updates - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "23-03-2026 11:52 IST"
+    }
+  }
+}
