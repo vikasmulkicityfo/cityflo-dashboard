@@ -144,6 +144,43 @@
         }
       },
       "fetched_at": "23-03-2026 12:33 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C499"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "17:59",
+              "buses": [
+                "C499"
+              ],
+              "message": "C499 - Tracking not working\n [Dinesh](tg://user?id=5293209744)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "21:05",
+              "buses": [],
+              "message": "C 50 tracking is not working [Nana Madane](tg://user?id=5877440805)",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "24-03-2026 10:49 IST"
     }
   },
   "2026-03-24": {
