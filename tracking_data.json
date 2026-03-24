@@ -154,13 +154,14 @@
             "C05",
             "C147",
             "C273",
+            "C275",
             "C318",
             "C488",
             "C541",
             "C578",
             "C58"
           ],
-          "bus_count": 8,
+          "bus_count": 9,
           "details": [
             {
               "time": "07:47",
@@ -237,17 +238,38 @@
               "buses": [],
               "message": "Due to network issues tracking is not working properly",
               "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:54",
+              "buses": [
+                "C275"
+              ],
+              "message": "C275  tracker issue [Nilesh](tg://user?id=783675268)",
+              "group": "Daily Ops - Mumbai"
             }
           ]
         },
         "Delhi": {
-          "buses": [],
-          "bus_count": 0,
+          "buses": [
+            "D90",
+            "D94"
+          ],
+          "bus_count": 2,
           "details": [
             {
               "time": "08:02",
-              "buses": [],
+              "buses": [
+                "D94"
+              ],
               "message": "D94 @Amitkhola81 tracking not working, pls check",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "09:25",
+              "buses": [
+                "D90"
+              ],
+              "message": "D90  driver dont stop at Omaxe Heights Gate-2 Faridabad\n@Amitkhola81  As there is tracker issue in bus  Please check",
               "group": "Daily Ops - Delhi"
             }
           ]
@@ -269,7 +291,7 @@
           ]
         }
       },
-      "fetched_at": "24-03-2026 09:12 IST"
+      "fetched_at": "24-03-2026 10:14 IST"
     }
   }
 }
