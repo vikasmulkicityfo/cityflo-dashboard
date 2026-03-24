@@ -153,6 +153,7 @@
           "buses": [
             "C05",
             "C147",
+            "C241",
             "C273",
             "C275",
             "C318",
@@ -161,7 +162,7 @@
             "C578",
             "C58"
           ],
-          "bus_count": 9,
+          "bus_count": 10,
           "details": [
             {
               "time": "07:47",
@@ -246,15 +247,24 @@
               ],
               "message": "C275  tracker issue [Nilesh](tg://user?id=783675268)",
               "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:54",
+              "buses": [
+                "C241"
+              ],
+              "message": "C241 tracker is down [Faiyaz](tg://user?id=844669251)",
+              "group": "Daily Ops - Mumbai"
             }
           ]
         },
         "Delhi": {
           "buses": [
             "D90",
-            "D94"
+            "D94",
+            "D97"
           ],
-          "bus_count": 2,
+          "bus_count": 3,
           "details": [
             {
               "time": "08:02",
@@ -262,6 +272,14 @@
                 "D94"
               ],
               "message": "D94 @Amitkhola81 tracking not working, pls check",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "08:38",
+              "buses": [
+                "D97"
+              ],
+              "message": "D97 Tracker is down @Amitkhola81",
               "group": "Daily Ops - Delhi"
             },
             {
@@ -291,7 +309,7 @@
           ]
         }
       },
-      "fetched_at": "24-03-2026 10:14 IST"
+      "fetched_at": "24-03-2026 10:15 IST"
     }
   }
 }
