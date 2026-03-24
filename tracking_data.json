@@ -346,7 +346,7 @@
           ]
         }
       },
-      "fetched_at": "24-03-2026 10:15 IST"
+      "fetched_at": "24-03-2026 10:59 IST"
     },
     "evening": {
       "cities": {
@@ -367,6 +367,446 @@
         }
       },
       "fetched_at": "24-03-2026 10:32 IST"
+    }
+  },
+  "2026-03-22": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "24-03-2026 10:59 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "24-03-2026 10:59 IST"
+    }
+  },
+  "2026-03-21": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "24-03-2026 10:59 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "24-03-2026 10:59 IST"
+    }
+  },
+  "2026-03-20": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C107",
+            "C224",
+            "C335",
+            "C339",
+            "C370",
+            "C470",
+            "C482",
+            "C491",
+            "C529",
+            "C541"
+          ],
+          "bus_count": 10,
+          "details": [
+            {
+              "time": "07:34",
+              "buses": [
+                "C529"
+              ],
+              "message": "C529 @Shrinaath95 bus status, no tracking?",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:05",
+              "buses": [],
+              "message": "470 status @Sanket_more69 \ntracking is not working",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "08:27",
+              "buses": [
+                "C335"
+              ],
+              "message": "C335 whr is the bus? tracking is also not available [Shaikh](tg://user?id=741565755)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:29",
+              "buses": [
+                "C339"
+              ],
+              "message": "C339  please tracker is not working  [Dinesh](tg://user?id=5293209744)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:59",
+              "buses": [],
+              "message": "Tracker issue",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "11:17",
+              "buses": [
+                "C491",
+                "C370",
+                "C541",
+                "C482",
+                "C470",
+                "C107",
+                "C224"
+              ],
+              "message": "Good morning, Mumbai Team,\n\n**Pre-read for Today’s Catch-Up | 20 March 2026**\n\n**Open Tickets Summary**\n\n* January 2026: 1\n* February 2026: 23\n* March 2026: 86\n\n**Open Ticket Breakdown (January)\n**\n* Seat Issue: 1\n\n**Open Ticket Breakdown (February)**\n\n* Bus Quality and Hygiene: 16\n* Driver Issue: 4\n* Lost and Found: 1\n* Seat Issue: 1\n* AC Issue: 1\n\n**Open Ticket Breakdown (March)**\n\n* Bus Quality",
+              "group": "Ops CS Updates - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": [
+            {
+              "time": "11:00",
+              "buses": [],
+              "message": "Good morning, Hyderabad Team,\n\n**Pre-read for Today’s Catch-Up | 20 March 2026**\n\n**Open Tickets Summary\n**\n* January 2026: 0\n* February 2026: 2\n* March 2026: 17\n\n**Open Ticket Breakdown (February)**\n\n* Seat Issue: 1\n* AC Issue: 1\n\n**Open Ticket Breakdown (March)**\n\n* Bus Quality and Hygiene: 3\n* Seat Issue: 6\n* AC Issue: 7\n* Tracking Issue: 1\n\n**Missed Passenger Count (Current Week)**\n\n* Total in",
+              "group": "Ops CS Updates - Hyderabad"
+            }
+          ]
+        }
+      },
+      "fetched_at": "24-03-2026 11:00 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": [
+            {
+              "time": "18:57",
+              "buses": [],
+              "message": "C 270 tracking is not working @Akshay_4071",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "20:34",
+              "buses": [],
+              "message": "So we are facing tracking issue?",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": [
+            {
+              "time": "18:40",
+              "buses": [],
+              "message": "[Prashanth](tg://user?id=1025840031) 7 min early, is there any tracking issue?",
+              "group": "Daily Ops - Hyderabad"
+            }
+          ]
+        }
+      },
+      "fetched_at": "24-03-2026 11:00 IST"
+    }
+  },
+  "2026-03-19": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "24-03-2026 11:00 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "24-03-2026 11:00 IST"
+    }
+  },
+  "2026-03-18": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C271",
+            "C489",
+            "C503"
+          ],
+          "bus_count": 3,
+          "details": [
+            {
+              "time": "08:16",
+              "buses": [
+                "C271"
+              ],
+              "message": "C271 tracking issue [Nilesh](tg://user?id=5220976317)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:53",
+              "buses": [
+                "C503"
+              ],
+              "message": "C503\nThe bus tracking is not working \n@Shriniwas1996 \nAny issue ?",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:53",
+              "buses": [
+                "C503"
+              ],
+              "message": "C503 tracking is  not working",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "09:21",
+              "buses": [
+                "C489"
+              ],
+              "message": "C489 where is the bus tracker not working [Sahil](tg://user?id=5124460739)",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [
+            "H136"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "08:53",
+              "buses": [
+                "H136"
+              ],
+              "message": "H136 location, tracker issue. [Balu](tg://user?id=5684008875)",
+              "group": "Daily Ops - Hyderabad"
+            },
+            {
+              "time": "09:00",
+              "buses": [
+                "H136"
+              ],
+              "message": "H136  status Tracker is not working [Kalyan](tg://user?id=1466208201)  [Prashanth](tg://user?id=1025840031)",
+              "group": "Daily Ops - Hyderabad"
+            }
+          ]
+        }
+      },
+      "fetched_at": "24-03-2026 11:00 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C212",
+            "C60"
+          ],
+          "bus_count": 2,
+          "details": [
+            {
+              "time": "20:08",
+              "buses": [],
+              "message": "why the tracker is not working [Sahil](tg://user?id=5124460739)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "20:12",
+              "buses": [
+                "C60"
+              ],
+              "message": "C60 - Bus tracking is not working\n @Shrinaath_16",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "20:42",
+              "buses": [
+                "C212"
+              ],
+              "message": "C212 -  Tracking is not working?\n @vishalmuneshwar10",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "24-03-2026 11:00 IST"
+    }
+  },
+  "2026-03-17": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C552"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "09:51",
+              "buses": [
+                "C552"
+              ],
+              "message": "C552 tracker issue and driver not stopped at kalpatru [Nilesh](tg://user?id=783675268)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "10:01",
+              "buses": [],
+              "message": "There was only 1 booking for kalpatru and tracker is not working in IO as well",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "24-03-2026 11:00 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "24-03-2026 11:00 IST"
     }
   }
 }
