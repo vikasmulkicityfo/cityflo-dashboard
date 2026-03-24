@@ -145,5 +145,131 @@
       },
       "fetched_at": "23-03-2026 12:33 IST"
     }
+  },
+  "2026-03-24": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C05",
+            "C147",
+            "C273",
+            "C318",
+            "C488",
+            "C541",
+            "C578",
+            "C58"
+          ],
+          "bus_count": 8,
+          "details": [
+            {
+              "time": "07:47",
+              "buses": [
+                "C488"
+              ],
+              "message": "C488 [Sahil](tg://user?id=5124460739) the bus did not halted ? tracking is not working can we check?",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "07:47",
+              "buses": [
+                "C541"
+              ],
+              "message": "C541 where is the bus tracker is not working [Sahil](tg://user?id=5124460739)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:04",
+              "buses": [
+                "C58"
+              ],
+              "message": "C58 tracking is not working [Faiyaz](tg://user?id=844669251)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:12",
+              "buses": [
+                "C147"
+              ],
+              "message": "C147 TRACKING ISSUE, where is the bus ? [Satyam Autade Cityflo](tg://user?id=5829371309)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:17",
+              "buses": [
+                "C318"
+              ],
+              "message": "C318 why the tracker is not working [Nilesh](tg://user?id=5220976317)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:24",
+              "buses": [
+                "C273"
+              ],
+              "message": "C273 tracking is not working [Satyam Autade Cityflo](tg://user?id=5829371309)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:30",
+              "buses": [
+                "C578"
+              ],
+              "message": "C578 Tracker is not working please check [Sahil](tg://user?id=5124460739)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:38",
+              "buses": [],
+              "message": "Facing tracking issue some stops didn't logged.",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:40",
+              "buses": [
+                "C05"
+              ],
+              "message": "Mjw - LP\n\nC05 after crossing rustomjee azziano stop ahead of stops didn't logged facing some tracking issue. \n\n[Ekta CF](tg://user?id=6550563027) \n[Faisal](tg://user?id=1455774448), @VikasMishra_25 & [Sunil](tg://user?id=5402143029) \n[Mangesh](tg://user?id=8217542471) \n#support",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "08:54",
+              "buses": [],
+              "message": "Due to network issues tracking is not working properly",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": [
+            {
+              "time": "08:02",
+              "buses": [],
+              "message": "D94 @Amitkhola81 tracking not working, pls check",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [
+            "H38"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "08:22",
+              "buses": [
+                "H38"
+              ],
+              "message": "H38 tracking not working [Kalyan](tg://user?id=1466208201)",
+              "group": "Daily Ops - Hyderabad"
+            }
+          ]
+        }
+      },
+      "fetched_at": "24-03-2026 09:09 IST"
+    }
   }
 }
