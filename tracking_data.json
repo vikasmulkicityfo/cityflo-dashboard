@@ -804,6 +804,153 @@
         }
       },
       "fetched_at": "24-03-2026 11:21 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C381",
+            "C449",
+            "C532"
+          ],
+          "bus_count": 3,
+          "details": [
+            {
+              "time": "17:10",
+              "buses": [
+                "C449"
+              ],
+              "message": "C449 - Bus tracking not available where is the bus [Dinesh](tg://user?id=5293209744)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "17:16",
+              "buses": [],
+              "message": "pls check tracker is not working",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "17:18",
+              "buses": [
+                "C532"
+              ],
+              "message": "C532 2 Cx missed from cignus no tracking [Swapnil](tg://user?id=7026374279)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "17:42",
+              "buses": [
+                "C381"
+              ],
+              "message": "**C381 - Tracker is down. **[**Shaikh**](tg://user?id=741565755)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "17:43",
+              "buses": [],
+              "message": "Due traffic tracker is down but bus reaching jb Nagar",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [
+            "H151"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "19:53",
+              "buses": [
+                "H151"
+              ],
+              "message": "H151 tracking issue, where is bus [Balu](tg://user?id=5684008875)",
+              "group": "Daily Ops - Hyderabad"
+            }
+          ]
+        }
+      },
+      "fetched_at": "25-03-2026 13:25 IST"
+    }
+  },
+  "2026-03-25": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C6001",
+            "C76"
+          ],
+          "bus_count": 2,
+          "details": [
+            {
+              "time": "08:23",
+              "buses": [],
+              "message": "Can we check on this ? The tracker is also not working [Dinesh](tg://user?id=5293209744)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:50",
+              "buses": [],
+              "message": "CB28\nwhy the tracking is not working?? where is the cab?? [Faiyaz](tg://user?id=844669251) [Nilesh](tg://user?id=783675268)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "10:02",
+              "buses": [
+                "C6001"
+              ],
+              "message": "C6001 where Is the bus the tracker is not working the sch time is 10:01 @Shriniwas1996",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "10:28",
+              "buses": [
+                "C6001"
+              ],
+              "message": "C6001 why the bus was delay and the tracker also not working @Shriniwas1996",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "10:48",
+              "buses": [],
+              "message": "why Tracker is not working [Nilesh](tg://user?id=5220976317)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "10:55",
+              "buses": [
+                "C76"
+              ],
+              "message": "C76 tracker is not working [Nilesh](tg://user?id=5220976317)",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": [
+            {
+              "time": "09:10",
+              "buses": [],
+              "message": "I will check with cautio recording . tracking is not working at that point.",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "25-03-2026 13:25 IST"
     }
   }
 }

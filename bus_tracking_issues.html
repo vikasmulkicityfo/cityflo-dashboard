@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cityflo â€” Bus Tracking Issues</title>
+<title>Cityflo — Bus Tracking Issues</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f4f8; color: #222; min-height: 100vh; }
 
-  /* â”€â”€ Header â”€â”€ */
+  /* ── Header ── */
   header { background: #1565c0; color: #fff; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
   header h1 { font-size: 20px; font-weight: 700; letter-spacing: .3px; }
   header h1 span { color: #90caf9; }
   .subtitle { font-size: 13px; color: #bbdefb; margin-top: 3px; }
 
-  /* â”€â”€ Filters â”€â”€ */
+  /* ── Filters ── */
   .filters { background: #fff; padding: 14px 32px; border-bottom: 1px solid #dde3ea; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
   .filter-group { display: flex; align-items: center; gap: 8px; }
   .filter-group label { font-size: 12px; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: .4px; white-space: nowrap; }
@@ -25,15 +25,15 @@
   .btn-clear { padding: 8px 16px; background: #fff; color: #666; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; cursor: pointer; }
   .btn-clear:hover { background: #f5f5f5; }
 
-  /* â”€â”€ Legend â”€â”€ */
+  /* ── Legend ── */
   .legend { display: flex; align-items: center; gap: 14px; margin-left: auto; flex-wrap: wrap; }
   .legend-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #555; font-weight: 600; }
   .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
 
-  /* â”€â”€ Main â”€â”€ */
+  /* ── Main ── */
   main { max-width: 1200px; margin: 28px auto; padding: 0 24px; }
 
-  /* â”€â”€ Day block â”€â”€ */
+  /* ── Day block ── */
   .day-block { margin-bottom: 36px; }
   .day-header {
     font-size: 14px; font-weight: 800; color: #1565c0;
@@ -41,7 +41,7 @@
     margin-bottom: 16px; text-transform: uppercase; letter-spacing: .5px;
   }
 
-  /* â”€â”€ Shift wrapper â”€â”€ */
+  /* ── Shift wrapper ── */
   .shift-wrapper { background: #fff; border-radius: 10px; box-shadow: 0 1px 6px rgba(0,0,0,.09); overflow: hidden; margin-bottom: 14px; }
   .shift-title {
     padding: 12px 18px; font-size: 13px; font-weight: 700;
@@ -51,11 +51,11 @@
   .shift-evening .shift-title { background: #4527a0; }
   .shift-total { font-size: 12px; font-weight: 600; background: rgba(255,255,255,.25); border-radius: 12px; padding: 2px 10px; white-space: nowrap; }
 
-  /* â”€â”€ City grid â”€â”€ */
+  /* ── City grid ── */
   .city-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; }
   @media (max-width: 750px) { .city-grid { grid-template-columns: 1fr; } }
 
-  /* â”€â”€ City block â”€â”€ */
+  /* ── City block ── */
   .city-block { border-right: 1px solid #eee; }
   .city-block:last-child { border-right: none; }
   .city-header {
@@ -66,18 +66,18 @@
   .city-count { background: rgba(255,255,255,.28); border-radius: 10px; padding: 1px 8px; font-size: 12px; }
   .city-body { padding: 10px 14px 12px; }
 
-  /* â”€â”€ Bus chips â”€â”€ */
+  /* ── Bus chips ── */
   .bus-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
   .bus-chip { border-radius: 20px; border: 1px solid; padding: 3px 11px; font-size: 12px; font-weight: 700; }
 
   .no-issues { font-size: 12px; color: #bbb; font-style: italic; padding: 4px 0; }
 
-  /* â”€â”€ Details toggle â”€â”€ */
+  /* ── Details toggle ── */
   .detail-toggle { margin-top: 4px; }
   .detail-toggle summary { font-size: 12px; color: #1565c0; cursor: pointer; font-weight: 600; padding: 3px 0; list-style: none; }
-  .detail-toggle summary::before { content: 'â–¶ '; font-size: 10px; }
+  .detail-toggle summary::before { content: '▶ '; font-size: 10px; }
   details[open] .detail-toggle summary::before,
-  .detail-toggle[open] summary::before { content: 'â–¼ '; font-size: 10px; }
+  .detail-toggle[open] summary::before { content: '▼ '; font-size: 10px; }
   .detail-toggle summary:hover { text-decoration: underline; }
   .detail-table { width: 100%; margin-top: 8px; border-collapse: collapse; font-size: 11.5px; }
   .detail-table th { background: #f5f5f5; padding: 6px 8px; text-align: left; font-weight: 700; color: #444; border-bottom: 2px solid #e0e0e0; white-space: nowrap; }
@@ -88,7 +88,7 @@
 
   .fetched-at { padding: 6px 18px 10px; font-size: 11px; color: #bbb; border-top: 1px solid #f5f5f5; }
 
-  /* â”€â”€ Empty â”€â”€ */
+  /* ── Empty ── */
   .empty { text-align: center; padding: 80px 20px; color: #aaa; font-size: 15px; }
 </style>
 </head>
@@ -135,10 +135,55 @@
 </div>
 
 <main id="main">
+<div class="day-block" data-date="2026-03-25">
+  <div class="day-header">25 Mar 2026</div>
+  <div class="shift-wrapper shift-morning" data-shift="morning">
+    <div class="shift-title">Morning Shift  ·  6 AM – 3 PM<span class="shift-total">2 buses affected</span></div>
+    <div class="city-grid">
+<div class="city-block">
+  <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">2</span></div>
+  <div class="city-body">
+    <div class="bus-chips">
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C6001</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C76</span>
+    </div>
+    <details class="detail-toggle">
+      <summary>View 6 message(s)</summary>
+      <table class="detail-table">
+        <thead><tr><th>Time</th><th>Buses</th><th>Group</th><th>Message</th></tr></thead>
+        <tbody>
+          <tr><td>08:23</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>Can we check on this ? The tracker is also not working [Dinesh](tg://user?id=5293209744)</td></tr>
+          <tr><td>08:50</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>CB28
+why the tracking is not working?? where is the cab?? [Faiyaz](tg://user?id=844669251) [Nilesh](tg://user?id=783675268)</td></tr>
+          <tr><td>10:02</td><td><b>C6001</b></td><td>Daily Ops - Mumbai</td><td>C6001 where Is the bus the tracker is not working the sch time is 10:01 @Shriniwas1996</td></tr>
+          <tr><td>10:28</td><td><b>C6001</b></td><td>Daily Ops - Mumbai</td><td>C6001 why the bus was delay and the tracker also not working @Shriniwas1996</td></tr>
+          <tr><td>10:48</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>why Tracker is not working [Nilesh](tg://user?id=5220976317)</td></tr>
+          <tr><td>10:55</td><td><b>C76</b></td><td>Daily Ops - Mumbai</td><td>C76 tracker is not working [Nilesh](tg://user?id=5220976317)</td></tr>
+        </tbody>
+      </table>
+    </details>
+  </div>
+</div>
+<div class="city-block">
+  <div class="city-header" style="background:#b71c1c">Delhi &nbsp;<span class="city-count">0</span></div>
+  <div class="city-body">
+    <div class="no-issues">No tracking issues</div>
+  </div>
+</div>
+<div class="city-block">
+  <div class="city-header" style="background:#1b5e20">Hyderabad &nbsp;<span class="city-count">0</span></div>
+  <div class="city-body">
+    <div class="no-issues">No tracking issues</div>
+  </div>
+</div>
+    </div>
+    <div class="fetched-at">Last updated: 25-03-2026 13:25 IST</div>
+  </div>
+</div>
 <div class="day-block" data-date="2026-03-24">
   <div class="day-header">24 Mar 2026</div>
   <div class="shift-wrapper shift-morning" data-shift="morning">
-    <div class="shift-title">Morning Shift  Â·  6 AM â€“ 3 PM<span class="shift-total">14 buses affected</span></div>
+    <div class="shift-title">Morning Shift  ·  6 AM – 3 PM<span class="shift-total">14 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">10</span></div>
@@ -167,7 +212,7 @@
           <tr><td>08:17</td><td><b>C318</b></td><td>Daily Ops - Mumbai</td><td>C318 why the tracker is not working [Nilesh](tg://user?id=5220976317)</td></tr>
           <tr><td>08:24</td><td><b>C273</b></td><td>Daily Ops - Mumbai</td><td>C273 tracking is not working [Satyam Autade Cityflo](tg://user?id=5829371309)</td></tr>
           <tr><td>08:30</td><td><b>C578</b></td><td>Daily Ops - Mumbai</td><td>C578 Tracker is not working please check [Sahil](tg://user?id=5124460739)</td></tr>
-          <tr><td>08:38</td><td><b>â€”</b></td><td>Daily Ops - Mumbai</td><td>Facing tracking issue some stops didn't logged.</td></tr>
+          <tr><td>08:38</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>Facing tracking issue some stops didn't logged.</td></tr>
           <tr><td>08:40</td><td><b>C05</b></td><td>Ops CS Updates - Mumbai</td><td>Mjw - LP
 
 C05 after crossing rustomjee azziano stop ahead of stops didn't logged facing some tracking issue. 
@@ -176,7 +221,7 @@ C05 after crossing rustomjee azziano stop ahead of stops didn't logged facing so
 [Faisal](tg://user?id=1455774448), @VikasMishra_25 &amp; [Sunil](tg://user?id=5402143029) 
 [Mangesh](tg://user?id=8217542471) 
 #support</td></tr>
-          <tr><td>08:54</td><td><b>â€”</b></td><td>Daily Ops - Mumbai</td><td>Due to network issues tracking is not working properly</td></tr>
+          <tr><td>08:54</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>Due to network issues tracking is not working properly</td></tr>
           <tr><td>08:54</td><td><b>C275</b></td><td>Daily Ops - Mumbai</td><td>C275  tracker issue [Nilesh](tg://user?id=783675268)</td></tr>
           <tr><td>08:54</td><td><b>C241</b></td><td>Daily Ops - Mumbai</td><td>C241 tracker is down [Faiyaz](tg://user?id=844669251)</td></tr>
         </tbody>
@@ -226,11 +271,63 @@ C05 after crossing rustomjee azziano stop ahead of stops didn't logged facing so
     </div>
     <div class="fetched-at">Last updated: 24-03-2026 11:21 IST</div>
   </div>
+  <div class="shift-wrapper shift-evening" data-shift="evening">
+    <div class="shift-title">Evening Shift  ·  3 PM – 11 PM<span class="shift-total">4 buses affected</span></div>
+    <div class="city-grid">
+<div class="city-block">
+  <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">3</span></div>
+  <div class="city-body">
+    <div class="bus-chips">
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C381</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C449</span>
+      <span class="bus-chip" style="background:#e3f2fd;border-color:#90caf9;color:#0d47a1">C532</span>
+    </div>
+    <details class="detail-toggle">
+      <summary>View 5 message(s)</summary>
+      <table class="detail-table">
+        <thead><tr><th>Time</th><th>Buses</th><th>Group</th><th>Message</th></tr></thead>
+        <tbody>
+          <tr><td>17:10</td><td><b>C449</b></td><td>Daily Ops - Mumbai</td><td>C449 - Bus tracking not available where is the bus [Dinesh](tg://user?id=5293209744)</td></tr>
+          <tr><td>17:16</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>pls check tracker is not working</td></tr>
+          <tr><td>17:18</td><td><b>C532</b></td><td>Daily Ops - Mumbai</td><td>C532 2 Cx missed from cignus no tracking [Swapnil](tg://user?id=7026374279)</td></tr>
+          <tr><td>17:42</td><td><b>C381</b></td><td>Daily Ops - Mumbai</td><td>**C381 - Tracker is down. **[**Shaikh**](tg://user?id=741565755)</td></tr>
+          <tr><td>17:43</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>Due traffic tracker is down but bus reaching jb Nagar</td></tr>
+        </tbody>
+      </table>
+    </details>
+  </div>
+</div>
+<div class="city-block">
+  <div class="city-header" style="background:#b71c1c">Delhi &nbsp;<span class="city-count">0</span></div>
+  <div class="city-body">
+    <div class="no-issues">No tracking issues</div>
+  </div>
+</div>
+<div class="city-block">
+  <div class="city-header" style="background:#1b5e20">Hyderabad &nbsp;<span class="city-count">1</span></div>
+  <div class="city-body">
+    <div class="bus-chips">
+      <span class="bus-chip" style="background:#e8f5e9;border-color:#a5d6a7;color:#1b5e20">H151</span>
+    </div>
+    <details class="detail-toggle">
+      <summary>View 1 message(s)</summary>
+      <table class="detail-table">
+        <thead><tr><th>Time</th><th>Buses</th><th>Group</th><th>Message</th></tr></thead>
+        <tbody>
+          <tr><td>19:53</td><td><b>H151</b></td><td>Daily Ops - Hyderabad</td><td>H151 tracking issue, where is bus [Balu](tg://user?id=5684008875)</td></tr>
+        </tbody>
+      </table>
+    </details>
+  </div>
+</div>
+    </div>
+    <div class="fetched-at">Last updated: 25-03-2026 13:25 IST</div>
+  </div>
 </div>
 <div class="day-block" data-date="2026-03-23">
   <div class="day-header">23 Mar 2026</div>
   <div class="shift-wrapper shift-morning" data-shift="morning">
-    <div class="shift-title">Morning Shift  Â·  6 AM â€“ 3 PM<span class="shift-total">22 buses affected</span></div>
+    <div class="shift-title">Morning Shift  ·  6 AM – 3 PM<span class="shift-total">22 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">21</span></div>
@@ -264,11 +361,11 @@ C05 after crossing rustomjee azziano stop ahead of stops didn't logged facing so
         <thead><tr><th>Time</th><th>Buses</th><th>Group</th><th>Message</th></tr></thead>
         <tbody>
           <tr><td>08:03</td><td><b>C179</b></td><td>Daily Ops - Mumbai</td><td>C179 @Shriniwas1996 tracking not available, bus status??</td></tr>
-          <tr><td>08:17</td><td><b>â€”</b></td><td>Ops CS Updates - Mumbai</td><td>but tracking is not working</td></tr>
+          <tr><td>08:17</td><td><b>—</b></td><td>Ops CS Updates - Mumbai</td><td>but tracking is not working</td></tr>
           <tr><td>08:36</td><td><b>C07</b></td><td>Daily Ops - Mumbai</td><td>C07 Status Tracker is not working @Shriniwas1996</td></tr>
-          <tr><td>08:41</td><td><b>â€”</b></td><td>Daily Ops - Mumbai</td><td>tracker is  not working</td></tr>
-          <tr><td>08:52</td><td><b>â€”</b></td><td>Ops CS Updates - Mumbai</td><td>Why tracking is not working</td></tr>
-          <tr><td>08:56</td><td><b>â€”</b></td><td>Daily Ops - Mumbai</td><td>tracking down [Faiyaz](tg://user?id=844669251)</td></tr>
+          <tr><td>08:41</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>tracker is  not working</td></tr>
+          <tr><td>08:52</td><td><b>—</b></td><td>Ops CS Updates - Mumbai</td><td>Why tracking is not working</td></tr>
+          <tr><td>08:56</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>tracking down [Faiyaz](tg://user?id=844669251)</td></tr>
           <tr><td>09:04</td><td><b>C229</b></td><td>Daily Ops - Mumbai</td><td>C229 tracker not working [Faiyaz](tg://user?id=844669251)</td></tr>
           <tr><td>09:09</td><td><b>C247</b></td><td>Ops CS Updates - Mumbai</td><td>tracking not working bus is delayed [Shaikh](tg://user?id=741565755) c247</td></tr>
           <tr><td>09:46</td><td><b>C38, C502, C247, C419, C229, C30, C38, C60, C252, C241, C196, C103, C453, C44, C471, C401, C158, C170, C179, C351</b></td><td>Ops CS Updates - Mumbai</td><td>Hi Team,
@@ -331,7 +428,7 @@ C351 –</td></tr>
     <div class="fetched-at">Last updated: 24-03-2026 11:21 IST</div>
   </div>
   <div class="shift-wrapper shift-evening" data-shift="evening">
-    <div class="shift-title">Evening Shift  Â·  3 PM â€“ 11 PM<span class="shift-total">1 buses affected</span></div>
+    <div class="shift-title">Evening Shift  ·  3 PM – 11 PM<span class="shift-total">1 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">1</span></div>
@@ -346,7 +443,7 @@ C351 –</td></tr>
         <tbody>
           <tr><td>17:59</td><td><b>C499</b></td><td>Daily Ops - Mumbai</td><td>C499 - Tracking not working
  [Dinesh](tg://user?id=5293209744)</td></tr>
-          <tr><td>21:05</td><td><b>â€”</b></td><td>Daily Ops - Mumbai</td><td>C 50 tracking is not working [Nana Madane](tg://user?id=5877440805)</td></tr>
+          <tr><td>21:05</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>C 50 tracking is not working [Nana Madane](tg://user?id=5877440805)</td></tr>
         </tbody>
       </table>
     </details>
@@ -371,7 +468,7 @@ C351 –</td></tr>
 <div class="day-block" data-date="2026-03-22">
   <div class="day-header">22 Mar 2026</div>
   <div class="shift-wrapper shift-morning" data-shift="morning">
-    <div class="shift-title">Morning Shift  Â·  6 AM â€“ 3 PM<span class="shift-total">0 buses affected</span></div>
+    <div class="shift-title">Morning Shift  ·  6 AM – 3 PM<span class="shift-total">0 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">0</span></div>
@@ -395,7 +492,7 @@ C351 –</td></tr>
     <div class="fetched-at">Last updated: 24-03-2026 11:20 IST</div>
   </div>
   <div class="shift-wrapper shift-evening" data-shift="evening">
-    <div class="shift-title">Evening Shift  Â·  3 PM â€“ 11 PM<span class="shift-total">0 buses affected</span></div>
+    <div class="shift-title">Evening Shift  ·  3 PM – 11 PM<span class="shift-total">0 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">0</span></div>
@@ -422,7 +519,7 @@ C351 –</td></tr>
 <div class="day-block" data-date="2026-03-21">
   <div class="day-header">21 Mar 2026</div>
   <div class="shift-wrapper shift-morning" data-shift="morning">
-    <div class="shift-title">Morning Shift  Â·  6 AM â€“ 3 PM<span class="shift-total">0 buses affected</span></div>
+    <div class="shift-title">Morning Shift  ·  6 AM – 3 PM<span class="shift-total">0 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">0</span></div>
@@ -446,7 +543,7 @@ C351 –</td></tr>
     <div class="fetched-at">Last updated: 24-03-2026 11:20 IST</div>
   </div>
   <div class="shift-wrapper shift-evening" data-shift="evening">
-    <div class="shift-title">Evening Shift  Â·  3 PM â€“ 11 PM<span class="shift-total">0 buses affected</span></div>
+    <div class="shift-title">Evening Shift  ·  3 PM – 11 PM<span class="shift-total">0 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">0</span></div>
@@ -473,7 +570,7 @@ C351 –</td></tr>
 <div class="day-block" data-date="2026-03-20">
   <div class="day-header">20 Mar 2026</div>
   <div class="shift-wrapper shift-morning" data-shift="morning">
-    <div class="shift-title">Morning Shift  Â·  6 AM â€“ 3 PM<span class="shift-total">10 buses affected</span></div>
+    <div class="shift-title">Morning Shift  ·  6 AM – 3 PM<span class="shift-total">10 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">10</span></div>
@@ -496,11 +593,11 @@ C351 –</td></tr>
         <thead><tr><th>Time</th><th>Buses</th><th>Group</th><th>Message</th></tr></thead>
         <tbody>
           <tr><td>07:34</td><td><b>C529</b></td><td>Daily Ops - Mumbai</td><td>C529 @Shrinaath95 bus status, no tracking?</td></tr>
-          <tr><td>08:05</td><td><b>â€”</b></td><td>Ops CS Updates - Mumbai</td><td>470 status @Sanket_more69 
+          <tr><td>08:05</td><td><b>—</b></td><td>Ops CS Updates - Mumbai</td><td>470 status @Sanket_more69 
 tracking is not working</td></tr>
           <tr><td>08:27</td><td><b>C335</b></td><td>Daily Ops - Mumbai</td><td>C335 whr is the bus? tracking is also not available [Shaikh](tg://user?id=741565755)</td></tr>
           <tr><td>08:29</td><td><b>C339</b></td><td>Daily Ops - Mumbai</td><td>C339  please tracker is not working  [Dinesh](tg://user?id=5293209744)</td></tr>
-          <tr><td>08:59</td><td><b>â€”</b></td><td>Daily Ops - Mumbai</td><td>Tracker issue</td></tr>
+          <tr><td>08:59</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>Tracker issue</td></tr>
           <tr><td>11:17</td><td><b>C491, C370, C541, C482, C470, C107, C224</b></td><td>Ops CS Updates - Mumbai</td><td>Good morning, Mumbai Team,
 
 **Pre-read for Today’s Catch-Up | 20 March 2026**
@@ -547,7 +644,7 @@ tracking is not working</td></tr>
     <div class="fetched-at">Last updated: 24-03-2026 11:20 IST</div>
   </div>
   <div class="shift-wrapper shift-evening" data-shift="evening">
-    <div class="shift-title">Evening Shift  Â·  3 PM â€“ 11 PM<span class="shift-total">0 buses affected</span></div>
+    <div class="shift-title">Evening Shift  ·  3 PM – 11 PM<span class="shift-total">0 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">0</span></div>
@@ -574,7 +671,7 @@ tracking is not working</td></tr>
 <div class="day-block" data-date="2026-03-19">
   <div class="day-header">19 Mar 2026</div>
   <div class="shift-wrapper shift-morning" data-shift="morning">
-    <div class="shift-title">Morning Shift  Â·  6 AM â€“ 3 PM<span class="shift-total">0 buses affected</span></div>
+    <div class="shift-title">Morning Shift  ·  6 AM – 3 PM<span class="shift-total">0 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">0</span></div>
@@ -598,7 +695,7 @@ tracking is not working</td></tr>
     <div class="fetched-at">Last updated: 24-03-2026 11:20 IST</div>
   </div>
   <div class="shift-wrapper shift-evening" data-shift="evening">
-    <div class="shift-title">Evening Shift  Â·  3 PM â€“ 11 PM<span class="shift-total">0 buses affected</span></div>
+    <div class="shift-title">Evening Shift  ·  3 PM – 11 PM<span class="shift-total">0 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">0</span></div>
@@ -625,7 +722,7 @@ tracking is not working</td></tr>
 <div class="day-block" data-date="2026-03-18">
   <div class="day-header">18 Mar 2026</div>
   <div class="shift-wrapper shift-morning" data-shift="morning">
-    <div class="shift-title">Morning Shift  Â·  6 AM â€“ 3 PM<span class="shift-total">4 buses affected</span></div>
+    <div class="shift-title">Morning Shift  ·  6 AM – 3 PM<span class="shift-total">4 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">3</span></div>
@@ -680,7 +777,7 @@ Any issue ?</td></tr>
     <div class="fetched-at">Last updated: 24-03-2026 11:20 IST</div>
   </div>
   <div class="shift-wrapper shift-evening" data-shift="evening">
-    <div class="shift-title">Evening Shift  Â·  3 PM â€“ 11 PM<span class="shift-total">2 buses affected</span></div>
+    <div class="shift-title">Evening Shift  ·  3 PM – 11 PM<span class="shift-total">2 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">2</span></div>
@@ -694,7 +791,7 @@ Any issue ?</td></tr>
       <table class="detail-table">
         <thead><tr><th>Time</th><th>Buses</th><th>Group</th><th>Message</th></tr></thead>
         <tbody>
-          <tr><td>20:08</td><td><b>â€”</b></td><td>Daily Ops - Mumbai</td><td>why the tracker is not working [Sahil](tg://user?id=5124460739)</td></tr>
+          <tr><td>20:08</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>why the tracker is not working [Sahil](tg://user?id=5124460739)</td></tr>
           <tr><td>20:12</td><td><b>C60</b></td><td>Daily Ops - Mumbai</td><td>C60 - Bus tracking is not working
  @Shrinaath_16</td></tr>
           <tr><td>20:42</td><td><b>C212</b></td><td>Daily Ops - Mumbai</td><td>C212 -  Tracking is not working?
@@ -723,7 +820,7 @@ Any issue ?</td></tr>
 <div class="day-block" data-date="2026-03-17">
   <div class="day-header">17 Mar 2026</div>
   <div class="shift-wrapper shift-morning" data-shift="morning">
-    <div class="shift-title">Morning Shift  Â·  6 AM â€“ 3 PM<span class="shift-total">1 buses affected</span></div>
+    <div class="shift-title">Morning Shift  ·  6 AM – 3 PM<span class="shift-total">1 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">1</span></div>
@@ -737,7 +834,7 @@ Any issue ?</td></tr>
         <thead><tr><th>Time</th><th>Buses</th><th>Group</th><th>Message</th></tr></thead>
         <tbody>
           <tr><td>09:51</td><td><b>C552</b></td><td>Daily Ops - Mumbai</td><td>C552 tracker issue and driver not stopped at kalpatru [Nilesh](tg://user?id=783675268)</td></tr>
-          <tr><td>10:01</td><td><b>â€”</b></td><td>Daily Ops - Mumbai</td><td>There was only 1 booking for kalpatru and tracker is not working in IO as well</td></tr>
+          <tr><td>10:01</td><td><b>—</b></td><td>Daily Ops - Mumbai</td><td>There was only 1 booking for kalpatru and tracker is not working in IO as well</td></tr>
         </tbody>
       </table>
     </details>
@@ -759,7 +856,7 @@ Any issue ?</td></tr>
     <div class="fetched-at">Last updated: 24-03-2026 11:19 IST</div>
   </div>
   <div class="shift-wrapper shift-evening" data-shift="evening">
-    <div class="shift-title">Evening Shift  Â·  3 PM â€“ 11 PM<span class="shift-total">0 buses affected</span></div>
+    <div class="shift-title">Evening Shift  ·  3 PM – 11 PM<span class="shift-total">0 buses affected</span></div>
     <div class="city-grid">
 <div class="city-block">
   <div class="city-header" style="background:#1565c0">Mumbai &nbsp;<span class="city-count">0</span></div>
@@ -787,7 +884,7 @@ Any issue ?</td></tr>
 </main>
 
 <script>
-var DATES = ["2026-03-24", "2026-03-23", "2026-03-22", "2026-03-21", "2026-03-20", "2026-03-19", "2026-03-18", "2026-03-17"];
+var DATES = ["2026-03-25", "2026-03-24", "2026-03-23", "2026-03-22", "2026-03-21", "2026-03-20", "2026-03-19", "2026-03-18", "2026-03-17"];
 
 // Populate date filter
 (function() {
