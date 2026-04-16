@@ -3516,5 +3516,27 @@
       },
       "fetched_at": "15-04-2026 15:19 IST"
     }
+  },
+  "2026-04-16": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "16-04-2026 07:21 IST"
+    }
   }
 }
