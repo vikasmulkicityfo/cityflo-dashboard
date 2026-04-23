@@ -3537,6 +3537,1031 @@
         }
       },
       "fetched_at": "16-04-2026 07:21 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C133"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "18:36",
+              "buses": [],
+              "message": "**EV04 tracker is down where is the bus **[Swapnil](tg://user?id=7026374279)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:41",
+              "buses": [],
+              "message": "Ev03 and EV04 TRACKER NOT WORKING",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "18:56",
+              "buses": [],
+              "message": "[Swapnil Tanawde Cityflo](tg://user?id=7026374279) as discussed util trip start and end not done by driver that's why tracking not working\n\n[Vikas Labde](tg://user?id=5366316225) \nFYI",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "19:13",
+              "buses": [
+                "C133"
+              ],
+              "message": "C133 Tracking not available @Akshay_4071 please assist",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [
+            "D203",
+            "D361"
+          ],
+          "bus_count": 2,
+          "details": [
+            {
+              "time": "18:07",
+              "buses": [],
+              "message": "Tracking issue hai. currently vehicle near Aricent tikri point",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "18:21",
+              "buses": [
+                "D361"
+              ],
+              "message": "D361\ntracking is not working [Amit](tg://user?id=1798717467)",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "18:26",
+              "buses": [
+                "D361"
+              ],
+              "message": "**D361 where is the bus tracker is down ****@Amitkhola81**",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "19:24",
+              "buses": [
+                "D203"
+              ],
+              "message": "D203 why is the bus taking time to reach the stop and why is tracker not updated [Amit](tg://user?id=1798717467)",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "23-04-2026 15:03 IST"
+    }
+  },
+  "2026-04-23": {
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "23-04-2026 15:01 IST"
+    },
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C127",
+            "C571"
+          ],
+          "bus_count": 2,
+          "details": [
+            {
+              "time": "07:10",
+              "buses": [
+                "C571"
+              ],
+              "message": "Thane - LP\nC571 driver facing tracking issue please be check.\n\n@rohi_13 \n[Mangesh](tg://user?id=8217542471), [Sunil](tg://user?id=5402143029) & @Suyog_Divekar \n#support",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "07:36",
+              "buses": [
+                "C127"
+              ],
+              "message": "Thane - NM\nC127 facing tracking issue please send comms according.\n\n@rohi_13 \n[Mangesh](tg://user?id=8217542471), [Sunil](tg://user?id=5402143029) & @Suyog_Divekar \n#support",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "07:51",
+              "buses": [],
+              "message": "Tracker is not working can  we check once @Shriniwas1996",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "07:54",
+              "buses": [],
+              "message": "Driver facing tracking issue",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "09:53",
+              "buses": [],
+              "message": "[Saloni](tg://user?id=5177775731) \nlook into this\ndue to mulitple time slot on B2C & B2B\nend time is after the b2C trip which is causing tracking issue",
+              "group": "Ops CS Updates - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [
+            "D54"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "08:10",
+              "buses": [
+                "D54"
+              ],
+              "message": "D54 tracker issue, where is bus [Amit](tg://user?id=1798717467)",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": [
+            {
+              "time": "08:58",
+              "buses": [],
+              "message": "Tracking is also wrong [Kalyan](tg://user?id=1466208201)",
+              "group": "Daily Ops - Hyderabad"
+            }
+          ]
+        }
+      },
+      "fetched_at": "23-04-2026 15:03 IST"
+    }
+  },
+  "2026-04-22": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C356"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "07:54",
+              "buses": [
+                "C356"
+              ],
+              "message": "C356 where's the bus? as tracker is not working @RoshanRRM",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [
+            "D141",
+            "D162"
+          ],
+          "bus_count": 2,
+          "details": [
+            {
+              "time": "07:13",
+              "buses": [
+                "D162"
+              ],
+              "message": "D162 where is bus, tracker issue [Amit](tg://user?id=1798717467)",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "08:00",
+              "buses": [
+                "D141"
+              ],
+              "message": "D141 status pls — tracker not available  @Amitkhola81",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "23-04-2026 15:01 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C260",
+            "C482"
+          ],
+          "bus_count": 2,
+          "details": [
+            {
+              "time": "15:39",
+              "buses": [
+                "C260"
+              ],
+              "message": "LP - Thane\n\nC260 driver facing tracking issue please send comms according. \n\n@mandardalvi_51, [Shubh](tg://user?id=7073636270) & @rohi_13 \n#support",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "15:53",
+              "buses": [
+                "C260"
+              ],
+              "message": "C260 - where's the bus? as tracker is not working. @Shriniwas1996",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "17:03",
+              "buses": [],
+              "message": "Cs team, \n  Daily we are facing tracker issue in EV03 AND EV04 as in driver mobile after standing at real location its showing its out of 150 meter radius so due to this issue i have to highlight to ct team to start and end trip for morning trips so then the evening tracker get started but after morning start and end trip still both buses tracker are not working\n\n[Vikas Labde Sir](tg://user?id=536",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "18:16",
+              "buses": [
+                "C482"
+              ],
+              "message": "C482 - tracking not working [Sahil](tg://user?id=5124460739)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:37",
+              "buses": [],
+              "message": "EV03 Tracking not available [Swapnil](tg://user?id=7026374279)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:40",
+              "buses": [],
+              "message": "Already highlighted in group that tracker is not working",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "21:58",
+              "buses": [],
+              "message": "Hi [Pranav](tg://user?id=1479256908) there is a tracking issue with the EV busses!",
+              "group": "Ops CS Updates - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "23-04-2026 15:01 IST"
+    }
+  },
+  "2026-04-21": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C214",
+            "C238",
+            "C475",
+            "C482",
+            "C484"
+          ],
+          "bus_count": 5,
+          "details": [
+            {
+              "time": "06:59",
+              "buses": [
+                "C214"
+              ],
+              "message": "where is C214 Tracker is not working @Shriniwas1996",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "07:01",
+              "buses": [],
+              "message": "Heading muchala..driver facing tracking issue.",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "07:02",
+              "buses": [
+                "C214"
+              ],
+              "message": "Thane - LP\nC214 driver facing tracking issue please be check & resolved this issue.\n\n@rohi_13 \n#support",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "07:07",
+              "buses": [],
+              "message": "Driver facing tracking issue",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "07:07",
+              "buses": [
+                "C214"
+              ],
+              "message": "C214 @Shriniwas1996 tracker is not working status?",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "07:30",
+              "buses": [],
+              "message": "tracking issue comms shared",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "09:09",
+              "buses": [],
+              "message": "can you share bus numbers where tracking issues are observed. for us will be helpful to investigate data accurately.",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "09:10",
+              "buses": [],
+              "message": "Major tracking issues were observed across all three cities, including Delhi and Kolkata, leading to high call volumes (exact count unavailable).",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "12:21",
+              "buses": [
+                "C238",
+                "C482",
+                "C484",
+                "C482",
+                "C482",
+                "C482",
+                "C484",
+                "C475"
+              ],
+              "message": "Pickup : Crown Banquet Drop: SEBI (Panvel-BKC)\n\n21st April C238 tracking issue\n\n20th April C482 6mins late for pickup - drop reached on time.\nAc not working reported during pickups - However partial refund was processed - full refund should have been given- cx took own mode of transport as it was too hot\n\n17th April C484 3 mins late both pickup and drop\n\n16th April C482 Bus was delayed by 8 mins a",
+              "group": "Cityflo - Customer Service"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [
+            "D371"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "09:01",
+              "buses": [
+                "D371"
+              ],
+              "message": "D371 tracking not working [Amit](tg://user?id=1798717467)",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [
+            "H62"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "09:03",
+              "buses": [
+                "H62"
+              ],
+              "message": "H62 - where's the bus? [Kalyan kk](tg://user?id=6589130067) as tracker is not working , may i know when bus will arrive at YNR Green Hills Megacity",
+              "group": "Daily Ops - Hyderabad"
+            }
+          ]
+        }
+      },
+      "fetched_at": "23-04-2026 15:02 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C16",
+            "C214"
+          ],
+          "bus_count": 2,
+          "details": [
+            {
+              "time": "17:47",
+              "buses": [
+                "C214"
+              ],
+              "message": "LP - Thane\nC214 facing tracking issue please send comms according.\n\n[Shubh](tg://user?id=7073636270) & @mandardalvi_51 \n#support",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "17:55",
+              "buses": [
+                "C214"
+              ],
+              "message": "C214 - status @Shriniwas1996 tracking not working",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:06",
+              "buses": [
+                "C214"
+              ],
+              "message": "C214 Tracking not available @Shriniwas1996",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:11",
+              "buses": [],
+              "message": "tracking not available, pls check",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:22",
+              "buses": [],
+              "message": "For the latest update, we have already requested the same. Additionally, there is a tracking issue affecting movement updates, so it won’t be possible to check this with the Ops group at the moment.\nIt would be appreciated if the request is addressed on the same channel rather than the Ops group, as sharing updates after 10 minutes on another group does not help.\nAlso, could you please let us know",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "18:29",
+              "buses": [],
+              "message": "where is the bus now @Shriniwas1996 \ntracking is not working please check",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:32",
+              "buses": [],
+              "message": "Ev03 tracker not working #support",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "18:32",
+              "buses": [],
+              "message": "Kindly ensure that the driver does not miss any stop, depart early, or halt at any undesignated stop. Since the tracking is not working, passengers are unable to see the bus location clearly.",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "18:34",
+              "buses": [],
+              "message": "EV04 TRACKER NOT WORKING #support",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "18:52",
+              "buses": [],
+              "message": "tracker is also not working [Swapnil](tg://user?id=7026374279)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "19:34",
+              "buses": [
+                "C16"
+              ],
+              "message": "**C16 - status ****@Shriniwas1996**** tracking not working here kindly please check and update**",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "23-04-2026 15:02 IST"
+    }
+  },
+  "2026-04-20": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C446"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "07:18",
+              "buses": [
+                "C446"
+              ],
+              "message": "C446 location, tracker issue [Shaikh](tg://user?id=741565755)",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [
+            "D114",
+            "D378"
+          ],
+          "bus_count": 2,
+          "details": [
+            {
+              "time": "08:31",
+              "buses": [
+                "D114"
+              ],
+              "message": "D114 bus status @Amitkhola81 tracker is not working",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "08:36",
+              "buses": [],
+              "message": "why the tracker is not working",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "09:47",
+              "buses": [
+                "D378"
+              ],
+              "message": "D378 where is the bus tracker is down @Amitkhola81",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "10:09",
+              "buses": [
+                "D378"
+              ],
+              "message": "D378 - where's the bus, as tracker is not working [Amit](tg://user?id=1798717467)",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "23-04-2026 15:02 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C320",
+            "C460"
+          ],
+          "bus_count": 2,
+          "details": [
+            {
+              "time": "18:33",
+              "buses": [],
+              "message": "Tracker not working checking that only",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:35",
+              "buses": [],
+              "message": "Ev04 tracker not working #support",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "19:06",
+              "buses": [
+                "C320"
+              ],
+              "message": "C320 tracking is not working for the bus [Nana Madane](tg://user?id=5877440805) [Shubh](tg://user?id=7073636270)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "19:26",
+              "buses": [],
+              "message": "tracking is not working\nthis is evening bus not morning can you please check",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "19:37",
+              "buses": [
+                "C460"
+              ],
+              "message": "**C460 Could we please check, driver has deborded all the passengers without informing anything and the bus already has left after deborded the passengers at MIDC central road, have we reschedule them on another bus?? tracking is also not showing.. **[**Shaikh**](tg://user?id=741565755)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "19:51",
+              "buses": [
+                "C460"
+              ],
+              "message": "C460 Tracking not available [Shaikh](tg://user?id=741565755) Please assist.",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [
+            "D191",
+            "D338",
+            "D353"
+          ],
+          "bus_count": 3,
+          "details": [
+            {
+              "time": "17:02",
+              "buses": [
+                "D191"
+              ],
+              "message": "D191 - but this is not the route tracking issue [Amit](tg://user?id=1798717467)",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "17:58",
+              "buses": [
+                "D353"
+              ],
+              "message": "**D353 tracker is down ****@Amitkhola81**",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "18:42",
+              "buses": [
+                "D338"
+              ],
+              "message": "D338 location @Amitkhola81, tracker issue",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "23-04-2026 15:02 IST"
+    }
+  },
+  "2026-04-19": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "23-04-2026 15:02 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "23-04-2026 15:02 IST"
+    }
+  },
+  "2026-04-18": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "23-04-2026 15:02 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C117"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "15:54",
+              "buses": [
+                "C117"
+              ],
+              "message": "**C117 tracker is down where is the bus cx is waiting at bisleri junction **[Nana Madane](tg://user?id=5877440805)",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "23-04-2026 15:02 IST"
+    }
+  },
+  "2026-04-17": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C06",
+            "C190",
+            "C58"
+          ],
+          "bus_count": 3,
+          "details": [
+            {
+              "time": "07:27",
+              "buses": [
+                "C190"
+              ],
+              "message": "Tracking ETA not working @Shriniwas1996 C190",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "07:53",
+              "buses": [
+                "C58"
+              ],
+              "message": "C58 - where's the bus ?As tracker is not working @RoshanRRM",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "07:58",
+              "buses": [],
+              "message": "tracker is not working please check @RoshanRRM",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:38",
+              "buses": [
+                "C06"
+              ],
+              "message": "C06 tracker is not working [Satyam](tg://user?id=5829371309) its heading towards \nSwastik Park is this right ? [Satyam](tg://user?id=5829371309)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "09:41",
+              "buses": [],
+              "message": "@vishalmuneshwar10 tracking not available",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "09:45",
+              "buses": [],
+              "message": "EM5 Tracker not working",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "09:52",
+              "buses": [],
+              "message": "chembur - powai previous trip was not ended now marked manually\nkindly check & align the driver to end or do it manually before the schedule. this will avoid tracking issue",
+              "group": "Ops CS Updates - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [
+            "D140",
+            "D26",
+            "D341",
+            "D65"
+          ],
+          "bus_count": 4,
+          "details": [
+            {
+              "time": "07:44",
+              "buses": [
+                "D140"
+              ],
+              "message": "D140 - where's the bus ? as tracker is not working [Amit](tg://user?id=1798717467)",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "07:48",
+              "buses": [
+                "D140"
+              ],
+              "message": "D140 @Amitkhola81 Status pls ?\nAlso tracking not working",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "07:53",
+              "buses": [
+                "D65"
+              ],
+              "message": "D65 [Amit](tg://user?id=1798717467) tracking not available",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "08:11",
+              "buses": [
+                "D26"
+              ],
+              "message": "D26 @Amitkhola81 bus tracking not available",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "08:51",
+              "buses": [
+                "D341"
+              ],
+              "message": "**D341 tracker is down where is the bus ****@Amitkhola81**",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [
+            "H62"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "09:05",
+              "buses": [
+                "H62"
+              ],
+              "message": "H62 is delay everyday [Prashanth](tg://user?id=1025840031) and tracking also not working",
+              "group": "Daily Ops - Hyderabad"
+            }
+          ]
+        }
+      },
+      "fetched_at": "23-04-2026 15:02 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C260",
+            "C320",
+            "C50"
+          ],
+          "bus_count": 3,
+          "details": [
+            {
+              "time": "18:34",
+              "buses": [],
+              "message": "Tracker issue checking",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "19:05",
+              "buses": [
+                "C320"
+              ],
+              "message": "C320 tracking is not working [Nana Madane](tg://user?id=5877440805) [Sonu](tg://user?id=5880552989)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "19:54",
+              "buses": [],
+              "message": "why the tracker is not working @vishalmuneshwar10",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "19:55",
+              "buses": [
+                "C260"
+              ],
+              "message": "C260 tracker not working",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "20:57",
+              "buses": [
+                "C50"
+              ],
+              "message": "C50 - status [Nana Madane](tg://user?id=5877440805) and why tracking is not working",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [
+            "D124",
+            "D162",
+            "D189",
+            "D200",
+            "D213",
+            "D242",
+            "D259",
+            "D278",
+            "D362",
+            "D374",
+            "D52",
+            "D60",
+            "D88"
+          ],
+          "bus_count": 13,
+          "details": [
+            {
+              "time": "19:05",
+              "buses": [
+                "D162"
+              ],
+              "message": "**D162 tracker is down where is the bus ****@Amitkhola81**",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "19:14",
+              "buses": [
+                "D162"
+              ],
+              "message": "D162 @Amitkhola81 tracking not available can we pls check",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "21:21",
+              "buses": [
+                "D189",
+                "D52",
+                "D162",
+                "D213",
+                "D362",
+                "D278",
+                "D374",
+                "D60",
+                "D200",
+                "D242",
+                "D88",
+                "D124",
+                "D259"
+              ],
+              "message": "Evening Shift Overview\n\nTotal swaps with reason:\n1. D189 Need Early time\n2. D52 Need Early time\n\nGround Issues:\n1. D162 Tracking issue due to device issues.\n2. D213 Received Rash Driving complaint So Given Strict warning to the driver and Vendor.\n3. D362 Vehicle broke down before the trip so we shifted all the booking in the next Bus.\n4. D278 Vehicle broken down due to driver contact number gettin",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "23-04-2026 15:02 IST"
     }
   }
 }
