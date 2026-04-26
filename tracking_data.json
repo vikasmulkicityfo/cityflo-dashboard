@@ -4563,5 +4563,229 @@
       },
       "fetched_at": "23-04-2026 15:02 IST"
     }
+  },
+  "2026-04-26": {
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "26-04-2026 17:53 IST"
+    },
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "26-04-2026 17:54 IST"
+    }
+  },
+  "2026-04-25": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "26-04-2026 17:53 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C260"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "16:34",
+              "buses": [
+                "C260"
+              ],
+              "message": "C260 - where's the bus, as tracker is not working and cx is waiting at peninsula corporate park @Shriniwas1996",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "16:37",
+              "buses": [
+                "C260"
+              ],
+              "message": "C260 - Even our tracker is not working @Shriniwas1996",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "16:57",
+              "buses": [],
+              "message": "cx is suggesting to update the tracker as it is not working so plz check if we can do something about it.",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "17:11",
+              "buses": [
+                "C260"
+              ],
+              "message": "C260 - where's the bus, tracker is down @Shriniwas1996 Also by what time it will reach Everard Nagar ?",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "26-04-2026 17:54 IST"
+    }
+  },
+  "2026-04-24": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": [
+            {
+              "time": "09:09",
+              "buses": [],
+              "message": "CB20 - where's the bus as tracker is not working ? [Faiyaz](tg://user?id=844669251)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "09:29",
+              "buses": [],
+              "message": "EM5 status ? Tracker not started yet ? [Kalpesh](tg://user?id=7602027257) @vishalmuneshwar10",
+              "group": "Ops CS Updates - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [
+            "H85"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "08:54",
+              "buses": [
+                "H85"
+              ],
+              "message": "**H85 tracking issue check **[Kalyan](tg://user?id=1466208201)",
+              "group": "Daily Ops - Hyderabad"
+            }
+          ]
+        }
+      },
+      "fetched_at": "26-04-2026 17:54 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C260",
+            "C345",
+            "C617"
+          ],
+          "bus_count": 3,
+          "details": [
+            {
+              "time": "17:06",
+              "buses": [
+                "C617"
+              ],
+              "message": "C617 tracker not working #support",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "18:38",
+              "buses": [],
+              "message": "Ev04 tracker not working #support",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "18:44",
+              "buses": [],
+              "message": "Tracker issue resolved",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "19:29",
+              "buses": [
+                "C345"
+              ],
+              "message": "**C345 tracker is down and the bus is getting delayed where is the bus **[Shaikh](tg://user?id=741565755)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "19:36",
+              "buses": [
+                "C260"
+              ],
+              "message": "C260 @vishalmuneshwar10 tracking not working, pls check",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "26-04-2026 17:54 IST"
+    }
   }
 }
