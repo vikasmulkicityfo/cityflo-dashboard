@@ -4930,6 +4930,26 @@
         }
       },
       "fetched_at": "03-05-2026 11:06 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "04-05-2026 15:00 IST"
     }
   },
   "2026-05-02": {
@@ -5464,6 +5484,85 @@
         }
       },
       "fetched_at": "03-05-2026 11:07 IST"
+    }
+  },
+  "2026-05-04": {
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "04-05-2026 15:00 IST"
+    },
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C162",
+            "C338"
+          ],
+          "bus_count": 2,
+          "details": [
+            {
+              "time": "07:26",
+              "buses": [
+                "C162"
+              ],
+              "message": "C162 tracking not started yet @Shriniwas1996",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "09:33",
+              "buses": [
+                "C338"
+              ],
+              "message": "C338 tracking not working @Akshay_4071 is the bus departing the first stop by 9:34 ?",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "13:44",
+              "buses": [],
+              "message": "@rohi_13  tracking is not working",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [
+            "D297"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "07:38",
+              "buses": [
+                "D297"
+              ],
+              "message": "D297 Tracking not visible [Amit](tg://user?id=1798717467)",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "04-05-2026 15:00 IST"
     }
   }
 }
