@@ -5564,5 +5564,325 @@
       },
       "fetched_at": "04-05-2026 15:00 IST"
     }
+  },
+  "2026-05-08": {
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "08-05-2026 15:00 IST"
+    },
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [
+            "D387"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "08:05",
+              "buses": [
+                "D387"
+              ],
+              "message": "D387 location, tracker issue @Amitkhola81",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "08:10",
+              "buses": [
+                "D387"
+              ],
+              "message": "D387 - Where's the bus? Tracker is down [Amit](tg://user?id=1798717467)",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "08-05-2026 15:01 IST"
+    }
+  },
+  "2026-05-07": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C19",
+            "C216",
+            "C551"
+          ],
+          "bus_count": 3,
+          "details": [
+            {
+              "time": "07:22",
+              "buses": [
+                "C551"
+              ],
+              "message": "C551 bus status [Kalpesh](tg://user?id=7602027257) tracker is not working",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "07:48",
+              "buses": [
+                "C216"
+              ],
+              "message": "C216 tracker issue, where is bus @Shriniwas1996",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "07:50",
+              "buses": [
+                "C19"
+              ],
+              "message": "C19 where is the bus tracker is down @swapnil",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "08-05-2026 15:00 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "08-05-2026 15:00 IST"
+    }
+  },
+  "2026-05-06": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C393"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "07:27",
+              "buses": [
+                "C393"
+              ],
+              "message": "**C393 where is the bus tracker is not working ****@Akshay_4071**",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": [
+            {
+              "time": "09:29",
+              "buses": [],
+              "message": "tracking not working pls check for that as wsell",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "09:32",
+              "buses": [],
+              "message": "tracker is not working please update the tracketr",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "08-05-2026 15:00 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C71"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "17:34",
+              "buses": [
+                "C71"
+              ],
+              "message": "**C71 where is the bus **[Swapnil](tg://user?id=7026374279) tracker is not working",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:38",
+              "buses": [],
+              "message": "EV04 where is the bus the tracker is down [Swapnil](tg://user?id=7026374279)",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "08-05-2026 15:00 IST"
+    }
+  },
+  "2026-05-05": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C238",
+            "C326",
+            "C485"
+          ],
+          "bus_count": 3,
+          "details": [
+            {
+              "time": "08:01",
+              "buses": [
+                "C238"
+              ],
+              "message": "C238 where is the bus tracker is down [Sahil](tg://user?id=5124460739)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:06",
+              "buses": [],
+              "message": "#support tracker not working",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:24",
+              "buses": [
+                "C326"
+              ],
+              "message": "C326 [Shaikh](tg://user?id=741565755) Tracking not started yet",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:28",
+              "buses": [
+                "C485"
+              ],
+              "message": "C485 tracking not working [Kalpesh](tg://user?id=7602027257) please check",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "08:41",
+              "buses": [],
+              "message": "Tracker is not working please check",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [
+            "D129"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "07:52",
+              "buses": [
+                "D129"
+              ],
+              "message": "D129\ndriver didn't stop at the Hanuman Shakti Shani Mandir Sector 11, and tracking is also not working properly kindly check @Amitkhola81",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "08-05-2026 15:00 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C71"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "17:54",
+              "buses": [
+                "C71"
+              ],
+              "message": "C71 where is the bus tracker not owkrting [Swapnil](tg://user?id=7026374279)",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "08-05-2026 15:00 IST"
+    }
   }
 }
