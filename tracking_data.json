@@ -6321,5 +6321,108 @@
       },
       "fetched_at": "13-05-2026 16:38 IST"
     }
+  },
+  "2026-05-14": {
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "14-05-2026 15:25 IST"
+    },
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C369"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "07:12",
+              "buses": [
+                "C369"
+              ],
+              "message": "Thane - LP\nC369 driver facing tracking issue please be send comms according.\n\n[Ekta CF](tg://user?id=6550563027) & @mandardalvi_51 \n[Mangesh](tg://user?id=8217542471), @Suyog_Divekar & [Sunil](tg://user?id=5402143029) \n#support",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "10:43",
+              "buses": [],
+              "message": "Tracker  is not working please check",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [
+            "D173",
+            "D295",
+            "D367",
+            "D394"
+          ],
+          "bus_count": 4,
+          "details": [
+            {
+              "time": "07:39",
+              "buses": [
+                "D367"
+              ],
+              "message": "d367 - TRACKING ISSUE [Amit](tg://user?id=1798717467)",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "07:44",
+              "buses": [
+                "D173"
+              ],
+              "message": "D173 where is the bus tracker not started yet @Amitkhola81",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "08:04",
+              "buses": [
+                "D394"
+              ],
+              "message": "D394 @Amitkhola81 tracking not available, where is the bus?",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "08:52",
+              "buses": [],
+              "message": "Tracker is not working can we check this",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "09:58",
+              "buses": [
+                "D295"
+              ],
+              "message": "D295 tracking not working @Amitkhola81",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "14-05-2026 15:25 IST"
+    }
   }
 }
