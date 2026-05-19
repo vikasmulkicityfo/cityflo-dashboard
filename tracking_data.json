@@ -6424,5 +6424,387 @@
       },
       "fetched_at": "14-05-2026 15:25 IST"
     }
+  },
+  "2026-05-19": {
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "19-05-2026 15:00 IST"
+    },
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [
+            "D116",
+            "D163",
+            "D196",
+            "D207",
+            "D210",
+            "D271",
+            "D296",
+            "D306",
+            "D312",
+            "D324",
+            "D357",
+            "D366",
+            "D389",
+            "D62"
+          ],
+          "bus_count": 14,
+          "details": [
+            {
+              "time": "07:08",
+              "buses": [
+                "D312",
+                "D271",
+                "D296",
+                "D357",
+                "D366",
+                "D306",
+                "D324",
+                "D389",
+                "D196",
+                "D116",
+                "D207",
+                "D163",
+                "D62"
+              ],
+              "message": "Yesterday Evening Shift Overview\n\nTotal swaps with reason:\n1. D312 Needs Early Time\n2. D271 Needs Early Time\n\nGround issues:\n1. D296 Vehicle brokedown due to Starting issue\n2. D357 Vehicle brokedown due to Ac not working \n3. D366 Driver Reached  late on first point due to Traffic jam\n4. D306 Tracking issue due to issue in driver device also Cautio not working \n5. D324 Ac stopped working in between",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "07:24",
+              "buses": [
+                "D210"
+              ],
+              "message": "D210 @Amitkhola81 tracking not available",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "19-05-2026 15:01 IST"
+    }
+  },
+  "2026-05-18": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C87"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "08:04",
+              "buses": [
+                "C87"
+              ],
+              "message": "Mulund andheri\n\nC87 tracking is not working\n\nPlease send come\n\n[Ekta Cityflo](tg://user?id=6550563027)",
+              "group": "Ops CS Updates - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "19-05-2026 15:00 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C117",
+            "C335",
+            "C364"
+          ],
+          "bus_count": 3,
+          "details": [
+            {
+              "time": "16:23",
+              "buses": [
+                "C335"
+              ],
+              "message": "C335 can we check where is the bus tracking not avaialble [Shaikh](tg://user?id=741565755) ?",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:28",
+              "buses": [
+                "C364"
+              ],
+              "message": "C364 Tracking Down. Status? [Shaikh](tg://user?id=741565755)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:34",
+              "buses": [],
+              "message": "Bus complete the sebi stop \nCaption tracker issue",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:35",
+              "buses": [
+                "C117"
+              ],
+              "message": "C117 Status? Tracking issue @Shriniwas1996",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:41",
+              "buses": [],
+              "message": "#support ev03 and ev04 tracker not working",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "18:49",
+              "buses": [],
+              "message": "EV03 EV04 both tracking not working [Swapnil](tg://user?id=7026374279)  [Shubh](tg://user?id=7073636270)  [Pranav](tg://user?id=1479256908)",
+              "group": "Daily Ops - Mumbai"
+            },
+            {
+              "time": "18:54",
+              "buses": [
+                "C117"
+              ],
+              "message": "C117 Status? Tracking Issue @Shriniwas1996",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [
+            "D306"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "17:51",
+              "buses": [
+                "D306"
+              ],
+              "message": "D306 bus status @Amitkhola81 tracker is also not working",
+              "group": "Daily Ops - Delhi"
+            },
+            {
+              "time": "18:16",
+              "buses": [
+                "D306"
+              ],
+              "message": "please can we check where is D306 ?@Amitkhola81   tracking not availble",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "19-05-2026 15:00 IST"
+    }
+  },
+  "2026-05-17": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "19-05-2026 15:00 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "19-05-2026 15:00 IST"
+    }
+  },
+  "2026-05-16": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "19-05-2026 15:00 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "19-05-2026 15:00 IST"
+    }
+  },
+  "2026-05-15": {
+    "morning": {
+      "cities": {
+        "Mumbai": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Delhi": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "19-05-2026 15:01 IST"
+    },
+    "evening": {
+      "cities": {
+        "Mumbai": {
+          "buses": [
+            "C199",
+            "C651"
+          ],
+          "bus_count": 2,
+          "details": [
+            {
+              "time": "18:06",
+              "buses": [
+                "C199"
+              ],
+              "message": "Powai- thane \nC199 tracker not working #support plz check [saud](tg://user?id=648068730) [Shubh](tg://user?id=7073636270)",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "18:06",
+              "buses": [
+                "C651"
+              ],
+              "message": "Powai- thane \nC651 tracker not working #support plz check [saud](tg://user?id=648068730) [Shubh](tg://user?id=7073636270)",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "18:34",
+              "buses": [],
+              "message": "#support ev04 tracker issue not working",
+              "group": "Ops CS Updates - Mumbai"
+            },
+            {
+              "time": "18:41",
+              "buses": [],
+              "message": "Ev04 [Swapnil](tg://user?id=7026374279) tracker is still not working",
+              "group": "Daily Ops - Mumbai"
+            }
+          ]
+        },
+        "Delhi": {
+          "buses": [
+            "D371"
+          ],
+          "bus_count": 1,
+          "details": [
+            {
+              "time": "19:32",
+              "buses": [
+                "D371"
+              ],
+              "message": "D371 where is the bus tracking not working ?@Amitkhola81",
+              "group": "Daily Ops - Delhi"
+            }
+          ]
+        },
+        "Hyderabad": {
+          "buses": [],
+          "bus_count": 0,
+          "details": []
+        }
+      },
+      "fetched_at": "19-05-2026 15:01 IST"
+    }
   }
 }
